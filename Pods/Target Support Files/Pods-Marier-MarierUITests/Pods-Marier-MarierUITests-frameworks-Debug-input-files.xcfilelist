@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-Marier-MarierUITests/Pods-Marier-MarierUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework
+${BUILT_PRODUCTS_DIR}/Koloda/Koloda.framework
+${BUILT_PRODUCTS_DIR}/TTRangeSlider/TTRangeSlider.framework
+${BUILT_PRODUCTS_DIR}/pop/pop.framework

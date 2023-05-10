@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="GalleryCollecViewCell" customModule="Marier" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Eg-k6-hmD">
+                        <rect key="frame" x="10" y="5" width="130" height="190"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="i4" translatesAutoresizingMaskIntoConstraints="NO" id="wKP-wm-Zg3">
+                                <rect key="frame" x="0.0" y="0.0" width="130" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="XTr-QY-tR7"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m9M-KO-5MV">
+                                <rect key="frame" x="0.0" y="140" width="130" height="45"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Zf-y0-lrY">
+                                        <rect key="frame" x="47" y="5" width="36" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location icon" translatesAutoresizingMaskIntoConstraints="NO" id="yv5-jF-rM6">
+                                        <rect key="frame" x="17.666666666666668" y="22" width="9" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="12" id="PaQ-6b-nfq"/>
+                                            <constraint firstAttribute="width" constant="9" id="PfO-Q9-528"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 miles away" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLv-KS-brX">
+                                        <rect key="frame" x="31.666666666666664" y="22" width="66.666666666666686" height="12"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="SLv-KS-brX" firstAttribute="top" secondItem="1Zf-y0-lrY" secondAttribute="bottom" id="D7Q-k5-PU7"/>
+                                    <constraint firstItem="SLv-KS-brX" firstAttribute="centerX" secondItem="m9M-KO-5MV" secondAttribute="centerX" id="Kl6-N1-0vr"/>
+                                    <constraint firstAttribute="height" constant="45" id="aN6-KP-Zfn"/>
+                                    <constraint firstItem="yv5-jF-rM6" firstAttribute="top" secondItem="1Zf-y0-lrY" secondAttribute="bottom" id="msW-4n-Jcq"/>
+                                    <constraint firstItem="1Zf-y0-lrY" firstAttribute="centerX" secondItem="m9M-KO-5MV" secondAttribute="centerX" id="vkD-0F-avL"/>
+                                    <constraint firstItem="SLv-KS-brX" firstAttribute="leading" secondItem="yv5-jF-rM6" secondAttribute="trailing" constant="5" id="w0h-kI-uL9"/>
+                                    <constraint firstItem="1Zf-y0-lrY" firstAttribute="top" secondItem="m9M-KO-5MV" secondAttribute="top" constant="5" id="xYJ-3r-lFu"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wKP-wm-Zg3" secondAttribute="trailing" id="QuA-LY-ehj"/>
+                            <constraint firstItem="wKP-wm-Zg3" firstAttribute="centerX" secondItem="6Eg-k6-hmD" secondAttribute="centerX" id="ark-zX-5CU"/>
+                            <constraint firstItem="wKP-wm-Zg3" firstAttribute="leading" secondItem="6Eg-k6-hmD" secondAttribute="leading" id="cyH-ea-9ae"/>
+                            <constraint firstItem="m9M-KO-5MV" firstAttribute="leading" secondItem="wKP-wm-Zg3" secondAttribute="leading" id="i9h-Ot-fl0"/>
+                            <constraint firstItem="m9M-KO-5MV" firstAttribute="trailing" secondItem="wKP-wm-Zg3" secondAttribute="trailing" id="sOd-FH-GpT"/>
+                            <constraint firstItem="wKP-wm-Zg3" firstAttribute="top" secondItem="6Eg-k6-hmD" secondAttribute="top" id="vZH-t3-sHv"/>
+                            <constraint firstItem="m9M-KO-5MV" firstAttribute="top" secondItem="wKP-wm-Zg3" secondAttribute="bottom" id="yCy-2I-OrA"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="6Eg-k6-hmD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="UOK-dr-ted"/>
+                <constraint firstAttribute="trailing" secondItem="6Eg-k6-hmD" secondAttribute="trailing" constant="10" id="al1-FP-xjH"/>
+                <constraint firstItem="6Eg-k6-hmD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="cDd-Vl-6GK"/>
+                <constraint firstAttribute="bottom" secondItem="6Eg-k6-hmD" secondAttribute="bottom" constant="5" id="iS3-xf-62U"/>
+            </constraints>
+            <size key="customSize" width="150" height="200"/>
+            <connections>
+                <outlet property="ShadowView" destination="6Eg-k6-hmD" id="I8t-lF-Vt7"/>
+                <outlet property="UserImage" destination="wKP-wm-Zg3" id="qMk-AF-qWy"/>
+                <outlet property="distanceLabel" destination="SLv-KS-brX" id="ibS-gE-nfH"/>
+                <outlet property="userName" destination="1Zf-y0-lrY" id="27g-0E-9Cm"/>
+            </connections>
+            <point key="canvasLocation" x="174.04580152671755" y="71.83098591549296"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="i4" width="3984" height="5976"/>
+        <image name="location icon" width="17.333333969116211" height="24"/>
+    </resources>
+</document>

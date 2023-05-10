@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AddImgCollectionCell" customModule="Marier" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="160" height="130"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="160" height="130"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PmV-ch-GtZ">
+                        <rect key="frame" x="0.0" y="0.0" width="160" height="130"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PhotoFrame" translatesAutoresizingMaskIntoConstraints="NO" id="zue-Gv-fnQ">
+                                <rect key="frame" x="5" y="5" width="150" height="120"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wna-Nq-Sgu">
+                                <rect key="frame" x="130" y="100" width="30" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpF-rv-mcK">
+                                        <rect key="frame" x="6.3333333333333428" y="-1.6666666666666714" width="17.333333333333332" height="33.666666666666664"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.90196078431372551" green="0.32941176470588235" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="1ze-Kb-UsB"/>
+                                    <constraint firstAttribute="height" constant="30" id="rHN-va-IRo"/>
+                                    <constraint firstItem="cpF-rv-mcK" firstAttribute="centerX" secondItem="Wna-Nq-Sgu" secondAttribute="centerX" id="txg-HC-VKp"/>
+                                    <constraint firstItem="cpF-rv-mcK" firstAttribute="centerY" secondItem="Wna-Nq-Sgu" secondAttribute="centerY" id="wvD-3k-c8Q"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zue-Gv-fnQ" firstAttribute="leading" secondItem="PmV-ch-GtZ" secondAttribute="leading" constant="5" id="3AR-Vo-RhF"/>
+                            <constraint firstAttribute="trailing" secondItem="zue-Gv-fnQ" secondAttribute="trailing" constant="5" id="Cer-zj-KXf"/>
+                            <constraint firstAttribute="bottom" secondItem="zue-Gv-fnQ" secondAttribute="bottom" constant="5" id="VXR-5N-mCi"/>
+                            <constraint firstAttribute="bottom" secondItem="Wna-Nq-Sgu" secondAttribute="bottom" id="ld9-sy-QRC"/>
+                            <constraint firstAttribute="trailing" secondItem="Wna-Nq-Sgu" secondAttribute="trailing" id="w7S-v9-oSH"/>
+                            <constraint firstItem="zue-Gv-fnQ" firstAttribute="top" secondItem="PmV-ch-GtZ" secondAttribute="top" constant="5" id="zQ6-JA-598"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="PmV-ch-GtZ" secondAttribute="trailing" id="1F4-qe-sTo"/>
+                <constraint firstAttribute="bottom" secondItem="PmV-ch-GtZ" secondAttribute="bottom" id="WNS-nV-kO4"/>
+                <constraint firstItem="PmV-ch-GtZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ibJ-7z-mzh"/>
+                <constraint firstItem="PmV-ch-GtZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="wXv-8I-Mu2"/>
+            </constraints>
+            <size key="customSize" width="160" height="130"/>
+            <connections>
+                <outlet property="userimg" destination="zue-Gv-fnQ" id="t1H-Jt-3AX"/>
+            </connections>
+            <point key="canvasLocation" x="68.702290076335871" y="47.887323943661976"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="PhotoFrame" width="156" height="156"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

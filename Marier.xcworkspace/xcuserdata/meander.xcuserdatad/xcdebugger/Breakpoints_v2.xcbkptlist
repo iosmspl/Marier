@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "ECD9BE2F-7651-4C6D-AC13-7ECBF1C1944F"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "066D9427-F802-4694-AEFF-45A0898CE7D1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Marier/Controllers/FilterScreen/FilterVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "FilterVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "066D9427-F802-4694-AEFF-45A0898CE7D1 - 287edc8cece019b9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Marier.FilterVC.SexualityTabel.getter : Swift.Optional&lt;__C.UITableView&gt;"
+                  moduleName = "Marier"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/meander/Desktop/Marier/Marier/Controllers/FilterScreen/FilterVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "85">
+               </Location>
+               <Location
+                  uuid = "066D9427-F802-4694-AEFF-45A0898CE7D1 - 27c183b4068833b5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Marier.FilterVC.SexualityTabel.setter : Swift.Optional&lt;__C.UITableView&gt;"
+                  moduleName = "Marier"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/meander/Desktop/Marier/Marier/Controllers/FilterScreen/FilterVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "136">
+               </Location>
+               <Location
+                  uuid = "066D9427-F802-4694-AEFF-45A0898CE7D1 - 5979888d0e7b7024"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Marier.FilterVC.SexualityTabel.modify : Swift.Optional&lt;__C.UITableView&gt;"
+                  moduleName = "Marier"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/meander/Desktop/Marier/Marier/Controllers/FilterScreen/FilterVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "066D9427-F802-4694-AEFF-45A0898CE7D1 - 1e558ea7036b460"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Marier.FilterVC.SexualityTabel.modify : Swift.Optional&lt;__C.UITableView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Marier"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/meander/Desktop/Marier/Marier/Controllers/FilterScreen/FilterVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  uuid = "066D9427-F802-4694-AEFF-45A0898CE7D1 - 7d2fe24dc794a02e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Marier.FilterVC.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Marier.FilterVC"
+                  moduleName = "Marier"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/meander/Desktop/Marier/Marier/Controllers/FilterScreen/FilterVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "252">
+               </Location>
+               <Location
+                  uuid = "066D9427-F802-4694-AEFF-45A0898CE7D1 - b35191aa4b5ddceb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Marier.FilterVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Marier.FilterVC&gt;"
+                  moduleName = "Marier"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/meander/Desktop/Marier/Marier/Controllers/FilterScreen/FilterVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "200">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
