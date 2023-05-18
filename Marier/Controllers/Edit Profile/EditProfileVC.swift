@@ -10,7 +10,7 @@ import UIKit
 class EditProfileVC: UIViewController {
     
     @IBOutlet weak var heightView: NSLayoutConstraint!
-    var height:CGFloat = 750
+    var height:CGFloat = 800
     
     // texfields
     

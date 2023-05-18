@@ -17,8 +17,10 @@ extension FaqsVC: UITableViewDelegate,UITableViewDataSource{
         let cell = FaqsTableView.dequeueReusableCell(withIdentifier: "FaqusTabeleCell", for: indexPath) as! FaqusTabeleCell
         cell.lblQues.text = "Sample Question \(indexPath.row)"
         if SelectedIndex == indexPath.row{
+            cell.imgPlusMinus.image = UIImage(named: "minus")
             cell.lblAns.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis volutpat risus vitae iaculis. Duis laoreet molestie efficitur. Aenean arcu velit, vestibulum a libero vel, sollicitudin posuere dui.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis volutpat risus vitae iaculis. Duis laoreet molestie efficitur. "
         }else{
+            cell.imgPlusMinus.image = UIImage(named: "plus")
             cell.lblAns.text = ""
         }
         return cell

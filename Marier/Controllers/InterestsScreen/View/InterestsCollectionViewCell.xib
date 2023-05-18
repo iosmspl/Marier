@@ -23,7 +23,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKT-dW-Ay6">
                                 <rect key="frame" x="10" y="10" width="409" height="138"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.45882352941176469" green="0.45882352941176469" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>

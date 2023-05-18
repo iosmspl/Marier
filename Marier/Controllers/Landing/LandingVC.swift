@@ -25,6 +25,20 @@ class LandingVC: UIViewController {
         super.viewDidLoad()
         pageControl.numberOfPages = 3
         landingColl.register(UINib(nibName: "LandingCollectionCell", bundle: nil), forCellWithReuseIdentifier: "LandingCollectionCell")
+        
+        
+        let swipeLeftGesture = UISwipeGestureRecognizer(target: self, action: #selector(self.swipeHandel))
+        swipeLeftGesture.direction = .left
+           landingColl.addGestureRecognizer(swipeLeftGesture)
+    }
+    @objc func swipeHandel(){
+//        print("||||\(pageControl.currentPage)||")
+//        if pageControl.currentPage == 2{
+//            DispatchQueue.main.asyncAfter(wallDeadline: .now() + 1.0){
+//                let vc = StoryBoards.auth.instantiateViewController(withIdentifier: "EmailVC") as! EmailVC
+//                self.navigationController?.pushViewController(vc, animated: true)
+//            }
+//        }
     }
     
     

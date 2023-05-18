@@ -22,7 +22,7 @@ class OTPVC: UIViewController {
     }
     
     @IBAction func submitTapped(_ sender: UIButton){
-        let vc = StoryBoards.auth.instantiateViewController(withIdentifier: "PersonalVC") as! PersonalVC
+        let vc = StoryBoards.auth.instantiateViewController(withIdentifier: "BasicGuideLinesVC") as! BasicGuideLinesVC
         self.navigationController?.pushViewController(vc, animated: true)
     }
     @IBAction func resendTapped(_ sender: UIButton){

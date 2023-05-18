@@ -44,3 +44,22 @@ extension MyprofileVC: PHPickerViewControllerDelegate,UIImagePickerControllerDel
     
     
 }
+
+
+extension MyprofileVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = MyprofileCollectionView.dequeueReusableCell(withReuseIdentifier: "MyprofileCollectionCell", for: indexPath) as! MyprofileCollectionCell
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width/3 , height: 55)
+    }
+    
+    
+}

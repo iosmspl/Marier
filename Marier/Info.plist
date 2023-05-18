@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>app needs access to your location to provide location-based services even when it&apos;s in the background.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>app needs access to your location to provide location-based services even when it&apos;s in the background.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>app needs access to your location when it&apos;s in use to provide location-based services.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>Please allow  access to Photo Library to upload Images  </string>
 	<key>NSPhotoLibraryUsageDescription</key>

@@ -36,7 +36,7 @@ class EmailVC: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     @IBAction func privacyTapped(_ sender: UIButton){
-        let vc = StoryBoards.auth.instantiateViewController(withIdentifier: "TermsConditionVC") as! TermsConditionVC
+        let vc = StoryBoards.auth.instantiateViewController(withIdentifier: "TermCondtionVC") as! TermCondtionVC
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

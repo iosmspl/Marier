@@ -39,7 +39,43 @@ class SettingsVC: UIViewController {
         let vc = StoryBoards.Profile.instantiateViewController(withIdentifier: "FaqsVC") as! FaqsVC
         navigationController?.pushViewController(vc, animated: true)
     }
+    @IBAction func RecetPassesTapped(_ sender: UIButton) {
+        let vc = StoryBoards.Profile.instantiateViewController(withIdentifier: "RecentPassesVC") as! RecentPassesVC
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    @IBAction func ReferAsFriendTapped(_ sender: UIButton) {
+        let vc = StoryBoards.Profile.instantiateViewController(withIdentifier: "ReferAsFriendVC") as! ReferAsFriendVC
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
+    @IBAction func ManageNotificationTapped(_ sender: UIButton) {
+        let vc = StoryBoards.Profile.instantiateViewController(withIdentifier: "MangenotifiactionVC") as! MangenotifiactionVC
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    @IBAction func ContactSupportTapped(_ sender: UIButton) {
+        let vc = StoryBoards.Profile.instantiateViewController(withIdentifier: "RequestHelpVC") as! RequestHelpVC
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    @IBAction func LogoutTapped(_ sender: UIButton) {
+        let vc = StoryBoards.Profile.instantiateViewController(withIdentifier: "LogoutVC") as! LogoutVC
+        present(vc, animated: true)
+    }
+    @IBAction func DeleteAccountTapped(_ sender: UIButton) {
+        let vc = StoryBoards.Profile.instantiateViewController(withIdentifier: "DeleteAccVC") as! DeleteAccVC
+        present(vc, animated: true)
+    }
+    @IBAction func PremiunSubTapped(_ sender: UIButton) {
+        let vc = StoryBoards.PaidPlan.instantiateViewController(withIdentifier: "PaidPremiumVC") as! PaidPremiumVC
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
+    
+
+@IBAction func EditloctionTapped(_ sender: UIButton) {
+    let vc = StoryBoards.Profile.instantiateViewController(withIdentifier: "MapVC") as! MapVC
+    navigationController?.pushViewController(vc, animated: true)
+}
     /*
     // MARK: - Navigation
 

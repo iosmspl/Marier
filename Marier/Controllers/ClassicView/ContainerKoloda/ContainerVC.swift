@@ -9,10 +9,12 @@ import UIKit
 
 class ContainerVC: UIViewController {
     @IBOutlet weak var UserImgView: UIImageView!
+    
     var img:UIImage?
+    var SwipeImage: UIImage?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//        SwipeImageView.isHidden = true
         // Do any additional setup after loading the view.
     }
     
@@ -22,6 +24,8 @@ class ContainerVC: UIViewController {
             self.UserImgView.image = self.img
         }
     }
+    
+    
     
     
 

@@ -8,7 +8,10 @@
 import UIKit
 import Koloda
 class ClassicVC: UIViewController{
-
+    @IBOutlet weak var DislikeImg: UIImageView!
+    @IBOutlet weak var LikeImg: UIImageView!
+    @IBOutlet weak var SuperLimg: UIImageView!
+    
     @IBOutlet  var vu_koloda: KolodaView!
     let imgArray = [UIImage(named: "i1"),UIImage(named: "i2")
                   ,UIImage(named: "i3"),UIImage(named: "i4"),
@@ -18,6 +21,10 @@ class ClassicVC: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         loadContainerViews()
+        let SwipeImgArray:[UIImageView] = [DislikeImg,LikeImg,SuperLimg]
+        for img in SwipeImgArray{
+            img.isHidden = true
+        }
         vu_koloda.delegate = self
         vu_koloda.dataSource = self
         // Do any additional setup after loading the view.
@@ -35,10 +42,12 @@ class ClassicVC: UIViewController{
 
     @IBAction func dislikeTapped(_ sender: UIButton) {
         vu_koloda.swipe(.left)
+        SwipeImageMethod(like: true, dislike: false, superlike: true)
     }
     
     @IBAction func likedTapped(_ sender: Any) {
         vu_koloda.swipe(.right)
+        SwipeImageMethod(like: false, dislike: true, superlike: true)
         
     }
     
@@ -53,8 +62,10 @@ class ClassicVC: UIViewController{
     }
     
     @IBAction func StarTapped(_ sender: UIButton) {
-        let VC = StoryBoards.Discover.instantiateViewController(withIdentifier: "MatchedVC") as! MatchedVC
-        present(VC, animated: true)
+//        let VC = StoryBoards.Discover.instantiateViewController(withIdentifier: "MatchedVC") as! MatchedVC
+//        present(VC, animated: true)
+        vu_koloda.swipe(.up)
+        SwipeImageMethod(like: true, dislike: true, superlike: false)
     }
     
     

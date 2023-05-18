@@ -21,18 +21,17 @@ extension GalleryVC: UICollectionViewDelegate,UICollectionViewDataSource,UIColle
         let GalleryCell = GalleryCollectionView.dequeueReusableCell(withReuseIdentifier: "GalleryCollecViewCell", for: indexPath) as! GalleryCollecViewCell
         GalleryCell.UserImage.image = UIImage(named: "i4")
         
-        GalleryCell.ShadowView.layer.shadowOpacity = 0.8
-        GalleryCell.ShadowView.layer.shadowColor = UIColor.white.cgColor
+        GalleryCell.ShadowView.layer.shadowOpacity = 0.5
+        GalleryCell.ShadowView.layer.shadowColor = UIColor.black.cgColor
         GalleryCell.ShadowView.layer.shadowRadius = 2
         
         // code for shadow effect
-//        GalleryCell.ShadowView.layer.shadowOffset = CGSize(width: 5, height: 5)
+        GalleryCell.ShadowView.layer.shadowOffset = CGSize(width: 0, height: 2)
         return GalleryCell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return   CGSize(width: collectionView.frame.width/2 , height: 200 )
-        
         
     }
     

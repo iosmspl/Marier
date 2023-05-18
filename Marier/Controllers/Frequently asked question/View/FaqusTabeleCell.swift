@@ -10,6 +10,7 @@ import UIKit
 class FaqusTabeleCell: UITableViewCell {
     @IBOutlet weak var lblQues: UILabel!
     @IBOutlet weak var lblAns: UILabel!
+    @IBOutlet weak var imgPlusMinus: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

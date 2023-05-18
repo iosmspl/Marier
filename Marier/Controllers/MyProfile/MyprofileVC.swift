@@ -10,10 +10,12 @@ import PhotosUI
 
 class MyprofileVC: UIViewController {
     @IBOutlet weak var UserProfilePic: UIImageView!
+    @IBOutlet weak var MyprofileCollectionView: UICollectionView!
     var Selected_img_Array = [UIImage]()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        MyprofileCollectionView.register(UINib(nibName: "MyprofileCollectionCell", bundle: nil), forCellWithReuseIdentifier: "MyprofileCollectionCell")
+        
         // Do any additional setup after loading the view.
     }
     

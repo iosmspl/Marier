@@ -14,4 +14,5 @@ struct StoryBoards{
     public static let Discover = UIStoryboard(name: "DiscoverScreen", bundle: nil)
     public static let Profile =  UIStoryboard(name: "ProfileScrrens", bundle: nil)
     public static let PaidPlan = UIStoryboard(name: "PaidPlanScreens", bundle: nil)
+    public static let ChatBoard = UIStoryboard(name: "ChatBoard", bundle: nil)
 }
