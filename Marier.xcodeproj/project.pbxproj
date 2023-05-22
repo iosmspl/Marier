@@ -10,7 +10,14 @@
 		039B65F9ADEA151FAA91261A /* Pods_Marier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0B78D8A834A33539FDE846E /* Pods_Marier.framework */; };
 		14E76279FAA797799FC1DFEE /* Pods_Marier_MarierUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28459BC3501C6A2194658D37 /* Pods_Marier_MarierUITests.framework */; };
 		76020F2E2A1642FC008BF25C /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76020F2D2A1642FC008BF25C /* MapVC.swift */; };
+		76020F312A178F04008BF25C /* MyPhotosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76020F302A178F04008BF25C /* MyPhotosVC.swift */; };
+		76020F362A178F8E008BF25C /* MyphotosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76020F342A178F8E008BF25C /* MyphotosCell.swift */; };
+		76020F372A178F8E008BF25C /* MyphotosCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76020F352A178F8E008BF25C /* MyphotosCell.xib */; };
+		76020F392A178FAA008BF25C /* MyPhotosVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76020F382A178FAA008BF25C /* MyPhotosVC+Extension.swift */; };
+		76020F3C2A179C58008BF25C /* EmailVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76020F3B2A179C58008BF25C /* EmailVC+Extension.swift */; };
+		76020F3F2A17A920008BF25C /* OtpVc+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76020F3E2A17A920008BF25C /* OtpVc+Extension.swift */; };
 		76254BAD29E03EEA009D2C72 /* DetailProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76254BAC29E03EEA009D2C72 /* DetailProfileVC.swift */; };
+		762B2B462A1B369A00AFC5E5 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762B2B452A1B369A00AFC5E5 /* Reachability.swift */; };
 		762F628129DD915100CF50E8 /* DiscoverScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 762F628029DD915100CF50E8 /* DiscoverScreen.storyboard */; };
 		762F628729DD9BE000CF50E8 /* GalleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762F628629DD9BE000CF50E8 /* GalleryVC.swift */; };
 		762F628A29DDA6FB00CF50E8 /* GalleryCollecViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762F628829DDA6FB00CF50E8 /* GalleryCollecViewCell.swift */; };
@@ -20,6 +27,8 @@
 		762F629429DEF74800CF50E8 /* TabBarVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762F629329DEF74800CF50E8 /* TabBarVc.swift */; };
 		762F629929DFD90E00CF50E8 /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762F629829DFD90E00CF50E8 /* ContainerVC.swift */; };
 		762F629B29DFE73300CF50E8 /* ClassicVC+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762F629A29DFE73300CF50E8 /* ClassicVC+extension.swift */; };
+		76452EDB2A18FD8E000C53D6 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76452EDA2A18FD8D000C53D6 /* ApiManager.swift */; };
+		76452EDE2A1B30C1000C53D6 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76452EDD2A1B30C1000C53D6 /* UserModel.swift */; };
 		76460FF12A03883E007C2B36 /* MatchedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76460FF02A03883E007C2B36 /* MatchedVC.swift */; };
 		76460FF32A03BD8B007C2B36 /* ProfileScrrens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76460FF22A03BD8B007C2B36 /* ProfileScrrens.storyboard */; };
 		76460FF62A03BFD3007C2B36 /* MyprofileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76460FF52A03BFD3007C2B36 /* MyprofileVC.swift */; };
@@ -37,6 +46,7 @@
 		765338022A12539C0009DA51 /* MessageTabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765338002A12539C0009DA51 /* MessageTabelCell.xib */; };
 		765338052A1253C80009DA51 /* MessageVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765338042A1253C80009DA51 /* MessageVC+Extension.swift */; };
 		765338072A125C400009DA51 /* ChatBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 765338062A125C400009DA51 /* ChatBoard.storyboard */; };
+		7654F8C32A1B7DD0007D73BE /* UerDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7654F8C22A1B7DD0007D73BE /* UerDefaults.swift */; };
 		768E9F3D2A090302006BB4DE /* PaidPlanCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768E9F3B2A090302006BB4DE /* PaidPlanCollectionCell.swift */; };
 		768E9F3E2A090302006BB4DE /* PaidPlanCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 768E9F3C2A090302006BB4DE /* PaidPlanCollectionCell.xib */; };
 		768E9F412A090959006BB4DE /* PaidCoinSubVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768E9F402A090959006BB4DE /* PaidCoinSubVC.swift */; };
@@ -148,7 +158,14 @@
 		28459BC3501C6A2194658D37 /* Pods_Marier_MarierUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Marier_MarierUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6445B1B308E06AA0BA00AF23 /* Pods_MarierTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarierTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76020F2D2A1642FC008BF25C /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		76020F302A178F04008BF25C /* MyPhotosVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPhotosVC.swift; sourceTree = "<group>"; };
+		76020F342A178F8E008BF25C /* MyphotosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyphotosCell.swift; sourceTree = "<group>"; };
+		76020F352A178F8E008BF25C /* MyphotosCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyphotosCell.xib; sourceTree = "<group>"; };
+		76020F382A178FAA008BF25C /* MyPhotosVC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyPhotosVC+Extension.swift"; sourceTree = "<group>"; };
+		76020F3B2A179C58008BF25C /* EmailVC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmailVC+Extension.swift"; sourceTree = "<group>"; };
+		76020F3E2A17A920008BF25C /* OtpVc+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OtpVc+Extension.swift"; sourceTree = "<group>"; };
 		76254BAC29E03EEA009D2C72 /* DetailProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProfileVC.swift; sourceTree = "<group>"; };
+		762B2B452A1B369A00AFC5E5 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		762F628029DD915100CF50E8 /* DiscoverScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DiscoverScreen.storyboard; sourceTree = "<group>"; };
 		762F628629DD9BE000CF50E8 /* GalleryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryVC.swift; sourceTree = "<group>"; };
 		762F628829DDA6FB00CF50E8 /* GalleryCollecViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollecViewCell.swift; sourceTree = "<group>"; };
@@ -158,6 +175,8 @@
 		762F629329DEF74800CF50E8 /* TabBarVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVc.swift; sourceTree = "<group>"; };
 		762F629829DFD90E00CF50E8 /* ContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
 		762F629A29DFE73300CF50E8 /* ClassicVC+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClassicVC+extension.swift"; sourceTree = "<group>"; };
+		76452EDA2A18FD8D000C53D6 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		76452EDD2A1B30C1000C53D6 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		76460FF02A03883E007C2B36 /* MatchedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedVC.swift; sourceTree = "<group>"; };
 		76460FF22A03BD8B007C2B36 /* ProfileScrrens.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileScrrens.storyboard; sourceTree = "<group>"; };
 		76460FF52A03BFD3007C2B36 /* MyprofileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyprofileVC.swift; sourceTree = "<group>"; };
@@ -175,6 +194,7 @@
 		765338002A12539C0009DA51 /* MessageTabelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageTabelCell.xib; sourceTree = "<group>"; };
 		765338042A1253C80009DA51 /* MessageVC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MessageVC+Extension.swift"; sourceTree = "<group>"; };
 		765338062A125C400009DA51 /* ChatBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatBoard.storyboard; sourceTree = "<group>"; };
+		7654F8C22A1B7DD0007D73BE /* UerDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UerDefaults.swift; sourceTree = "<group>"; };
 		768E9F3B2A090302006BB4DE /* PaidPlanCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaidPlanCollectionCell.swift; sourceTree = "<group>"; };
 		768E9F3C2A090302006BB4DE /* PaidPlanCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaidPlanCollectionCell.xib; sourceTree = "<group>"; };
 		768E9F402A090959006BB4DE /* PaidCoinSubVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaidCoinSubVC.swift; sourceTree = "<group>"; };
@@ -334,6 +354,49 @@
 			path = MapView;
 			sourceTree = "<group>";
 		};
+		76020F2F2A178DEE008BF25C /* My Photos */ = {
+			isa = PBXGroup;
+			children = (
+				76020F332A178F57008BF25C /* Extension */,
+				76020F322A178F0B008BF25C /* View */,
+				76020F302A178F04008BF25C /* MyPhotosVC.swift */,
+			);
+			path = "My Photos";
+			sourceTree = "<group>";
+		};
+		76020F322A178F0B008BF25C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				76020F342A178F8E008BF25C /* MyphotosCell.swift */,
+				76020F352A178F8E008BF25C /* MyphotosCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		76020F332A178F57008BF25C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				76020F382A178FAA008BF25C /* MyPhotosVC+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		76020F3A2A179B8A008BF25C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				76020F3B2A179C58008BF25C /* EmailVC+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		76020F3D2A17A886008BF25C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				76020F3E2A17A920008BF25C /* OtpVc+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		76254BAB29E03E98009D2C72 /* DetailProfile */ = {
 			isa = PBXGroup;
 			children = (
@@ -405,6 +468,14 @@
 				762F629829DFD90E00CF50E8 /* ContainerVC.swift */,
 			);
 			path = ContainerKoloda;
+			sourceTree = "<group>";
+		};
+		76452EDC2A1B309E000C53D6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				76452EDD2A1B30C1000C53D6 /* UserModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		76460FEF2A038807007C2B36 /* MatchedScreen */ = {
@@ -537,6 +608,14 @@
 			path = ChatScreen;
 			sourceTree = "<group>";
 		};
+		7654F8C12A1B7CBB007D73BE /* UserDeaults */ = {
+			isa = PBXGroup;
+			children = (
+				7654F8C22A1B7DD0007D73BE /* UerDefaults.swift */,
+			);
+			path = UserDeaults;
+			sourceTree = "<group>";
+		};
 		768E9F392A090233006BB4DE /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -604,16 +683,19 @@
 		768EE58829CB0594001770CD /* Marier */ = {
 			isa = PBXGroup;
 			children = (
+				7654F8C12A1B7CBB007D73BE /* UserDeaults */,
+				76452EDC2A1B309E000C53D6 /* Models */,
 				769F18DF2A14A3460005CFCE /* Services */,
 				768EE5C129CB2177001770CD /* Controllers */,
-				768EE5BE29CB1574001770CD /* Extension */,
-				768EE58929CB0594001770CD /* AppDelegate.swift */,
-				768EE58B29CB0594001770CD /* SceneDelegate.swift */,
 				768EE59529CB0598001770CD /* Assets.xcassets */,
 				768EE5D029CB2808001770CD /* Storyboards */,
 				768EE59A29CB0598001770CD /* Info.plist */,
 				768EE59229CB0594001770CD /* Marier.xcdatamodeld */,
+				768EE5BE29CB1574001770CD /* Extension */,
+				768EE58929CB0594001770CD /* AppDelegate.swift */,
+				768EE58B29CB0594001770CD /* SceneDelegate.swift */,
 				768EE5BC29CB153E001770CD /* Helper.swift */,
+				762B2B452A1B369A00AFC5E5 /* Reachability.swift */,
 			);
 			path = Marier;
 			sourceTree = "<group>";
@@ -647,6 +729,7 @@
 		768EE5C129CB2177001770CD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				76020F2F2A178DEE008BF25C /* My Photos */,
 				76460FEF2A038807007C2B36 /* MatchedScreen */,
 				76020F2C2A164291008BF25C /* MapView */,
 				76E52CB12A14937F004A4AF3 /* Term&Condtions */,
@@ -734,6 +817,7 @@
 		768EE5DA29D161EC001770CD /* EmailScreen */ = {
 			isa = PBXGroup;
 			children = (
+				76020F3A2A179B8A008BF25C /* Extension */,
 				768EE5DC29D16427001770CD /* EmailVC.swift */,
 			);
 			path = EmailScreen;
@@ -742,6 +826,7 @@
 		768EE5DE29D1658E001770CD /* OtpScreen */ = {
 			isa = PBXGroup;
 			children = (
+				76020F3D2A17A886008BF25C /* Extension */,
 				768EE5EF29D2B238001770CD /* OTPVC.swift */,
 			);
 			path = OtpScreen;
@@ -865,6 +950,7 @@
 			isa = PBXGroup;
 			children = (
 				769F18E02A14A3FF0005CFCE /* ApiUrls.swift */,
+				76452EDA2A18FD8D000C53D6 /* ApiManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1256,6 +1342,7 @@
 				765338022A12539C0009DA51 /* MessageTabelCell.xib in Resources */,
 				76460FF32A03BD8B007C2B36 /* ProfileScrrens.storyboard in Resources */,
 				762F628B29DDA6FB00CF50E8 /* GalleryCollecViewCell.xib in Resources */,
+				76020F372A178F8E008BF25C /* MyphotosCell.xib in Resources */,
 				768EE5CD29CB2505001770CD /* LandingCollectionCell.xib in Resources */,
 				76CDD5CC2A0BC30300FC0F8B /* RecentPassCollectionCell.xib in Resources */,
 				768EE5EB29D1BC6C001770CD /* PersonalTableCell.xib in Resources */,
@@ -1412,6 +1499,7 @@
 				768E9F442A0909B3006BB4DE /* PaidCoinSubVC+Extension.swift in Sources */,
 				769A55CB29E3EE660074658D /* DetailProfileVC+Extension.swift in Sources */,
 				765337FD2A1253680009DA51 /* MessageVC.swift in Sources */,
+				76452EDE2A1B30C1000C53D6 /* UserModel.swift in Sources */,
 				76F736E02A01325B00955090 /* FilterVC+Extension.swift in Sources */,
 				768E9F412A090959006BB4DE /* PaidCoinSubVC.swift in Sources */,
 				768EE5CC29CB2505001770CD /* LandingCollectionCell.swift in Sources */,
@@ -1433,13 +1521,17 @@
 				76E1E3A829D5BE1B0065A9E8 /* AddImageVC.swift in Sources */,
 				762F629B29DFE73300CF50E8 /* ClassicVC+extension.swift in Sources */,
 				768E9F3D2A090302006BB4DE /* PaidPlanCollectionCell.swift in Sources */,
+				76020F392A178FAA008BF25C /* MyPhotosVC+Extension.swift in Sources */,
+				76020F312A178F04008BF25C /* MyPhotosVC.swift in Sources */,
 				76CDD5B82A0B673200FC0F8B /* FaqsVC.swift in Sources */,
 				76254BAD29E03EEA009D2C72 /* DetailProfileVC.swift in Sources */,
 				76CDD5C32A0B9D9800FC0F8B /* DeleteAccVC.swift in Sources */,
 				76CDD5B52A0A4EEE00FC0F8B /* BuyCoinVC+Extension.swift in Sources */,
 				76CDD5C62A0BA2B100FC0F8B /* RecentPassesVC.swift in Sources */,
 				768EE58A29CB0594001770CD /* AppDelegate.swift in Sources */,
+				7654F8C32A1B7DD0007D73BE /* UerDefaults.swift in Sources */,
 				76E1E39629D555550065A9E8 /* BasicGuideLinesVC+Extension.swift in Sources */,
+				76020F3C2A179C58008BF25C /* EmailVC+Extension.swift in Sources */,
 				76462D052A067A7C000E6B23 /* EditProfileVC+Extesion.swift in Sources */,
 				769F18DB2A149B1A0005CFCE /* TermCell.swift in Sources */,
 				76E1E39929D599A90065A9E8 /* InterestsVC.swift in Sources */,
@@ -1461,12 +1553,14 @@
 				768EE5EE29D1BF29001770CD /* PersonalVC+Extension.swift in Sources */,
 				76E5A3452A13486B003A73F2 /* ChatTabelCell.swift in Sources */,
 				768EE5BD29CB153E001770CD /* Helper.swift in Sources */,
+				76020F362A178F8E008BF25C /* MyphotosCell.swift in Sources */,
 				76E1E38E29D468010065A9E8 /* BasicGuideLinesVC.swift in Sources */,
 				762F629429DEF74800CF50E8 /* TabBarVc.swift in Sources */,
 				762F628729DD9BE000CF50E8 /* GalleryVC.swift in Sources */,
 				76E1E3A129D59B530065A9E8 /* InterestsCollectionViewCell.swift in Sources */,
 				769A55DE29E530940074658D /* ReportVC+Extension.swift in Sources */,
 				76CDD5B22A0A3B7100FC0F8B /* BuyCoinTabelCell.swift in Sources */,
+				762B2B462A1B369A00AFC5E5 /* Reachability.swift in Sources */,
 				76460FF62A03BFD3007C2B36 /* MyprofileVC.swift in Sources */,
 				768EE5E529D1BB5F001770CD /* PersonalVC.swift in Sources */,
 				768EE5F029D2B238001770CD /* OTPVC.swift in Sources */,
@@ -1478,8 +1572,10 @@
 				768EE58C29CB0594001770CD /* SceneDelegate.swift in Sources */,
 				76ABCE112A0E4434007BA868 /* LikeDislikeVC+Extension.swift in Sources */,
 				769F18DE2A149C270005CFCE /* TermCondtionVC+Extension.swift in Sources */,
+				76020F3F2A17A920008BF25C /* OtpVc+Extension.swift in Sources */,
 				76DEECCB29DB0B4D009BB9D1 /* AddImgCollectionCell.swift in Sources */,
 				76CDD5AA2A0A1D2900FC0F8B /* UseCoinVC.swift in Sources */,
+				76452EDB2A18FD8E000C53D6 /* ApiManager.swift in Sources */,
 				768EE59429CB0594001770CD /* Marier.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1661,6 +1757,12 @@
 				DEVELOPMENT_TEAM = 8XR9GPSS6Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Marier/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow  access to Camera to take photo and to upload Images ";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "app needs access to your location to provide location-based services even when it's in the background.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "app needs access to your location to provide location-based services even when it's in the background.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "app needs access to your location when it's in use to provide location-based services.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow  access to Photo Library to upload Images  ";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow  access to Photo Library to upload Images  ";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1691,6 +1793,12 @@
 				DEVELOPMENT_TEAM = 8XR9GPSS6Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Marier/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow  access to Camera to take photo and to upload Images ";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "app needs access to your location to provide location-based services even when it's in the background.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "app needs access to your location to provide location-based services even when it's in the background.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "app needs access to your location when it's in use to provide location-based services.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow  access to Photo Library to upload Images  ";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow  access to Photo Library to upload Images  ";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

@@ -76,6 +76,11 @@ class SettingsVC: UIViewController {
     let vc = StoryBoards.Profile.instantiateViewController(withIdentifier: "MapVC") as! MapVC
     navigationController?.pushViewController(vc, animated: true)
 }
+    @IBAction func MyPhotosTapped(_ sender: UIButton) {
+        let vc = StoryBoards.Profile.instantiateViewController(withIdentifier: "MyPhotosVC") as! MyPhotosVC
+        navigationController?.pushViewController(vc, animated: true)
+    }
+
     /*
     // MARK: - Navigation
 

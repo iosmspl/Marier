@@ -20,13 +20,14 @@ class MapVC: UIViewController,CLLocationManagerDelegate,MKMapViewDelegate {
         locationManager.delegate = self
         mapView.delegate = self
         
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.MarkerOnMap(_:)))
+        
         // Request location authorization
         locationManager.requestWhenInUseAuthorization()
         
         // Check if location services are enabled
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.startUpdatingLocation()
+        if CLLocationManager.locationServicesEnabled(){
+           checkLoctionAuthorization()
         }
         
         // Enable user interaction for the map view
@@ -34,6 +35,40 @@ class MapVC: UIViewController,CLLocationManagerDelegate,MKMapViewDelegate {
         mapView.isScrollEnabled = true
         mapView.showsUserLocation = true
     }
+   @objc func MarkerOnMap(_ uitapGesture : UITapGestureRecognizer){
+        let locationInView = uitapGesture.location(in: mapView)
+        let locationOnMap = mapView.convert(locationInView, toCoordinateFrom: mapView)
+        
+        let annotaion = MKPointAnnotation()
+        annotaion.coordinate = locationOnMap
+        mapView.addAnnotation(annotaion)
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let mk = MKMarkerAnnotationView()
+        return mk
+    }
+    
+    
+    
+    func checkLoctionAuthorization(){
+        let authStatus = locationManager.authorizationStatus
+        
+        switch authStatus{
+            
+        case .notDetermined:
+            print("")
+            locationManager.requestWhenInUseAuthorization()
+        case .restricted, .denied:
+            print("")
+        case .authorizedAlways , .authorizedWhenInUse:
+            locationManager.startUpdatingLocation()
+        
+        @unknown default:
+            print("")
+        }
+    }
+    
     
     @IBAction func BackTapped(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
@@ -51,6 +86,12 @@ class MapVC: UIViewController,CLLocationManagerDelegate,MKMapViewDelegate {
             locationManager.stopUpdatingLocation()
         }
     }
+    // MARK: -
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        checkLoctionAuthorization()
+    }
+    
+    
     
     // MARK: - MKMapViewDelegate
     

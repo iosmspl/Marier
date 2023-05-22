@@ -21,8 +21,14 @@ class ChatVC: UIViewController {
         
         // observers for keyboard events
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyBoardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboradWillhide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        let tapgesture = UITapGestureRecognizer(target: self, action: #selector(self.Endediting))
+        ChatTabelView.addGestureRecognizer(tapgesture)
         // Do any additional setup after loading the view.
+    }
+   @objc func Endediting(){
+        MessageTextField.endEditing(true)
+        
     }
     
     @objc func keyBoardWillShow(notification: Notification){
@@ -30,10 +36,13 @@ class ChatVC: UIViewController {
             return
         }
         let KeyboradHeight = keyboardFrame.height
-        bottomView.constant = KeyboradHeight+CGFloat(BottomMargen)
+        bottomView.constant = KeyboradHeight-30
         
         
         
+    }
+    @objc func keyboradWillhide(){
+        bottomView.constant = CGFloat(BottomMargen)
     }
     
     
@@ -47,11 +56,14 @@ class ChatVC: UIViewController {
                 let msg = chatModel(user: "", message: "hjhfhjfddjgfdjgfdjgfjgsjfgjgfjgfsgfsjgfgfgjfxjgffdxdgf", type: .Recever)
                 chatData.append(msg)
                 ChatTabelView.reloadData()
+                tabelToscrole(Row: chatData.count-1, tabletoScrolle: ChatTabelView)
             }
             ChatTabelView.reloadData()
+            tabelToscrole(Row: chatData.count-1, tabletoScrolle: ChatTabelView)
         }
         
     }
+    
     @IBAction func backTapped(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
         
@@ -71,5 +83,8 @@ class ChatVC: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
 
 }

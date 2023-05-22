@@ -242,6 +242,7 @@
                         <outlet property="ChatTabelView" destination="F8E-V0-wE5" id="1A5-ij-R53"/>
                         <outlet property="MessageTextField" destination="FdW-s4-p5q" id="sHq-4Z-A6L"/>
                         <outlet property="SendMessageBtn" destination="mAu-Lj-kei" id="QI7-ja-6dq"/>
+                        <outlet property="bottomView" destination="wzy-hB-9FH" id="YkI-sM-OwZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

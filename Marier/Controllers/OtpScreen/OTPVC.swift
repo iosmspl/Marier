@@ -6,20 +6,26 @@
 //
 
 import UIKit
-
+//import OTPTextField
 class OTPVC: UIViewController {
 
     @IBOutlet weak var firstTxtField: UITextField!
     @IBOutlet weak var secondTxtField: UITextField!
     @IBOutlet weak var thirdTxtField: UITextField!
     @IBOutlet weak var fourthTxtField: UITextField!
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+                let textFieldArray = [firstTxtField,secondTxtField,thirdTxtField,fourthTxtField]
+        for filed in textFieldArray {
+            filed?.delegate = self
+        }
+        firstTxtField.becomeFirstResponder()
+//         Do any additional setup after loading the view.
     }
+    
+       
+   
     
     @IBAction func submitTapped(_ sender: UIButton){
         let vc = StoryBoards.auth.instantiateViewController(withIdentifier: "BasicGuideLinesVC") as! BasicGuideLinesVC

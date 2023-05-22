@@ -6,9 +6,11 @@ target 'Marier' do
   use_frameworks!
 
   # Pods for Marier
-    pod 'DropDown'
-     pod "Koloda"
-    pod "TTRangeSlider"
+   pod 'AlamofireImage'
+   pod 'Alamofire'
+   pod 'DropDown'
+   pod "Koloda"
+   pod "TTRangeSlider"
 
   target 'MarierTests' do
     inherit! :search_paths
