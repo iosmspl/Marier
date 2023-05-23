@@ -131,6 +131,7 @@
 		76E5A34B2A135C11003A73F2 /* SenderChatTabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E5A3492A135C11003A73F2 /* SenderChatTabelCell.swift */; };
 		76E5A34C2A135C11003A73F2 /* SenderChatTabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76E5A34A2A135C11003A73F2 /* SenderChatTabelCell.xib */; };
 		76E5A34F2A135DEB003A73F2 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E5A34E2A135DEB003A73F2 /* ChatModel.swift */; };
+		76E7C47D2A1CDE0300AC1786 /* ConnectionLostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E7C47C2A1CDE0300AC1786 /* ConnectionLostVC.swift */; };
 		76EBC3A62A1497BF00ABC51A /* TermCondtionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EBC3A52A1497BF00ABC51A /* TermCondtionVC.swift */; };
 		76F669D929F907CB00277C47 /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F669D829F907CB00277C47 /* FilterVC.swift */; };
 		76F736E02A01325B00955090 /* FilterVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F736DF2A01325B00955090 /* FilterVC+Extension.swift */; };
@@ -283,6 +284,7 @@
 		76E5A3492A135C11003A73F2 /* SenderChatTabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderChatTabelCell.swift; sourceTree = "<group>"; };
 		76E5A34A2A135C11003A73F2 /* SenderChatTabelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SenderChatTabelCell.xib; sourceTree = "<group>"; };
 		76E5A34E2A135DEB003A73F2 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
+		76E7C47C2A1CDE0300AC1786 /* ConnectionLostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionLostVC.swift; sourceTree = "<group>"; };
 		76EBC3A52A1497BF00ABC51A /* TermCondtionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermCondtionVC.swift; sourceTree = "<group>"; };
 		76F669D829F907CB00277C47 /* FilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
 		76F736DF2A01325B00955090 /* FilterVC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FilterVC+Extension.swift"; sourceTree = "<group>"; };
@@ -729,6 +731,7 @@
 		768EE5C129CB2177001770CD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				76E7C4792A1CDD1500AC1786 /* ConnectionLost */,
 				76020F2F2A178DEE008BF25C /* My Photos */,
 				76460FEF2A038807007C2B36 /* MatchedScreen */,
 				76020F2C2A164291008BF25C /* MapView */,
@@ -1194,6 +1197,14 @@
 			path = ChatModel;
 			sourceTree = "<group>";
 		};
+		76E7C4792A1CDD1500AC1786 /* ConnectionLost */ = {
+			isa = PBXGroup;
+			children = (
+				76E7C47C2A1CDE0300AC1786 /* ConnectionLostVC.swift */,
+			);
+			path = ConnectionLost;
+			sourceTree = "<group>";
+		};
 		76F669D729F9073800277C47 /* FilterScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -1575,6 +1586,7 @@
 				76020F3F2A17A920008BF25C /* OtpVc+Extension.swift in Sources */,
 				76DEECCB29DB0B4D009BB9D1 /* AddImgCollectionCell.swift in Sources */,
 				76CDD5AA2A0A1D2900FC0F8B /* UseCoinVC.swift in Sources */,
+				76E7C47D2A1CDE0300AC1786 /* ConnectionLostVC.swift in Sources */,
 				76452EDB2A18FD8E000C53D6 /* ApiManager.swift in Sources */,
 				768EE59429CB0594001770CD /* Marier.xcdatamodeld in Sources */,
 			);

@@ -23,5 +23,9 @@ class InterestsVC: UIViewController{
         let vc = StoryBoards.auth.instantiateViewController(withIdentifier: "AddImageVC") as! AddImageVC
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
 
+    @IBAction func backTapped(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
 }

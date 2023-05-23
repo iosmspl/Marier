@@ -16,8 +16,8 @@ extension OTPVC: UITextFieldDelegate{
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        print("||\(string.count)||")
-        print("\(textField.text?.count)")
+//        print("||\(string.count)||")
+//        print("\(textField.text?.count)")
         if (textField.text?.count)! < 1 && string.count > 0{
             if textField == firstTxtField{
                 secondTxtField.becomeFirstResponder()
@@ -31,7 +31,7 @@ extension OTPVC: UITextFieldDelegate{
             if textField == fourthTxtField{
                 textField.resignFirstResponder()
             }
-            print(string)
+//            print(string)
             textField.text = string
             return false
         }else if (textField.text?.count)! >= 1 && string.count == 0{
@@ -47,7 +47,7 @@ extension OTPVC: UITextFieldDelegate{
             textField.text = ""
             return false
         }else if (textField.text?.count)! >= 1 {
-            print("\(string)")
+//            print("\(string)")
             textField.text = string
             return false
         }
@@ -58,3 +58,4 @@ extension OTPVC: UITextFieldDelegate{
    
     
 }
+

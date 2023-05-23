@@ -37,7 +37,14 @@ class Defaults{
         }
     }
     
-    
+    // for store enterd text in emailVC
+    var mailOrNumber: String{
+        get{
+            return defaults.value(forKey: "enterdTxt") as! String
+        }set{
+            defaults.set(newValue, forKey: "enterdTxt")
+        }
+    }
     
 
 }

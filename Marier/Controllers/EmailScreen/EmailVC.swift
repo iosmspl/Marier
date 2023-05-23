@@ -6,11 +6,12 @@
 //
 
 import UIKit
-
+import ARSLineProgress
 class EmailVC: UIViewController {
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var EmailVCBgHeight: NSLayoutConstraint!
-    var height = 740
+    @IBOutlet weak var scrolleView: UIScrollView!
+    var height = 720
     override func viewDidLoad() {
         super.viewDidLoad()
         email.delegate = self
@@ -23,39 +24,61 @@ class EmailVC: UIViewController {
             return
         }
         EmailVCBgHeight.constant = frameHeight.height + CGFloat(height)
+        let topOffset = CGPoint(x: 0, y: (frameHeight.height))
+        scrolleView.setContentOffset(topOffset, animated: true)
     }
     @objc func keyboardWillhide(){
-        EmailVCBgHeight.constant = 740
+        EmailVCBgHeight.constant = 720
     }
     
     
     
     
     @IBAction func continueTapped(_ sender: UIButton){
-        
-//        print("||\(email.text?.trimmingCharacters(in: .whitespacesAndNewlines))||")
+//        ARSLineProgress.show()
       if ReachabilityNetwork.isConnectedToNetwork(){
           if email.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
              AlertDisplay(AlertTitle: "Field Missing", Message: "Please enter email or PhoneNumber", Actiontitle: "OK")
           }else {
+              ARSLineProgress.show()
+              let vc = StoryBoards.auth.instantiateViewController(withIdentifier: "OTPVC") as! OTPVC
+              Defaults.defaultClass.mailOrNumber = email.text!
               if isGmailAddress(email.text!){
-                  print("||Gmail||")
                   let model = loginOtpInput(phoneNumber: "" , email:  email.text!)
-//                  let model = ["email": email.text!]
-                  ApiManger.Shared.LoginOtpApi(OtpModel: model)
+                  ApiManger.Shared.LoginOtpApi(OtpModel: model) { isSuccess,resdata  in
+                      if isSuccess == true{
+                          ARSLineProgress.hide()
+                    self.navigationController?.pushViewController(vc, animated: true)
+                      }else {
+                          ARSLineProgress.hide()
+                          print("||error|| EmailVC")
+                      }
+                  }
                   
               }else if isPhoneNumber(email.text!){
-                  print("||number||")
                   let model = loginOtpInput(phoneNumber: email.text! , email: "")
-                  ApiManger.Shared.LoginOtpApi(OtpModel: model)
+                  ApiManger.Shared.LoginOtpApi(OtpModel: model) { isSuccess,resdata  in
+                      if isSuccess == true{
+                          ARSLineProgress.hide()
+                        self.navigationController?.pushViewController(vc, animated: true)
+                      }else {
+                          ARSLineProgress.hide()
+                          print("||error|| EmailVC")
+                      }
+                  }
                   
               } else{
+                  ARSLineProgress.hide()
+                  AlertDisplay(AlertTitle: "Validation Faild", Message: "please enter proper number or email", Actiontitle: "OK")
                   print(" plese enter valid mail or number")
               }
               
           }
 
         }else{
+            ARSLineProgress.hide()
+            let vc = StoryBoards.auth.instantiateViewController(withIdentifier: "ConnectionLostVC") as! ConnectionLostVC
+            navigationController?.pushViewController(vc, animated: true)
             print("somthing Went Wrong")
         }
             

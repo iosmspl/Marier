@@ -27,20 +27,15 @@ struct TokenStr: Codable{
     enum CodingKeys: String ,CodingKey {
         case token = "token"
     }
+}
     // MARK: - OTP VERIFICATION MODEL
-    struct otp: Encodable{
+    struct Otp: Encodable{
         let otp: String?
     }
     struct otpVerifyRes: Codable{
         let data: dataObj?
         let message: String?
         let token: String?
-        enum CodingKeys:  String,CodingKey {
-            case data = "data"
-            case message = "message"
-            case token = "token"
-        }
-        
     }
     struct dataObj: Codable{
         let avatar: String?
@@ -56,6 +51,26 @@ struct TokenStr: Codable{
         let gallery: [String]?
         
             }
+    struct SocialLogin: Codable{
+        let to: String?
+        let from: String?
+    }
+    struct Setting: Codable{
+        let sexType: String?
+        let distance: Int?
+        let language: String?
+        let location: LocationData?
+        let ageRange: AgeRange?
+        
+    }
+    struct LocationData: Codable{
+        let type: String?
+        let coordinates: [String]?
+    }
+    struct AgeRange: Codable{
+        let to: Int?
+        let from: Int?
+    }
     
     
-}
+

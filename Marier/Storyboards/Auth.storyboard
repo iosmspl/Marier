@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="47" width="390" height="763"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bCC-e4-1tU">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="744"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="720"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emailtheme" translatesAutoresizingMaskIntoConstraints="NO" id="Kcl-91-wEj">
                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="295.33333333333331"/>
@@ -103,7 +103,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bci-yn-6X9">
-                                                <rect key="frame" x="85" y="694" width="220" height="30"/>
+                                                <rect key="frame" x="85" y="684" width="220" height="30"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Terms of Use and Privacy Policy">
                                                     <color key="titleColor" name="borderColor"/>
@@ -160,15 +160,15 @@
                                         <constraints>
                                             <constraint firstItem="LQS-lL-jOp" firstAttribute="centerX" secondItem="bCC-e4-1tU" secondAttribute="centerX" id="0Gm-2o-Mnr"/>
                                             <constraint firstItem="bLX-ac-fOk" firstAttribute="centerX" secondItem="bCC-e4-1tU" secondAttribute="centerX" id="4uc-AE-nG0"/>
+                                            <constraint firstItem="bci-yn-6X9" firstAttribute="top" secondItem="LQS-lL-jOp" secondAttribute="bottom" constant="30" id="6qm-qk-R9w"/>
                                             <constraint firstItem="nBG-Hz-RUL" firstAttribute="top" secondItem="Kcl-91-wEj" secondAttribute="bottom" constant="20" id="7kS-NL-dIb"/>
                                             <constraint firstItem="LQS-lL-jOp" firstAttribute="top" secondItem="lcu-iD-7h3" secondAttribute="bottom" constant="20.329999999999998" id="8bA-rx-70k"/>
                                             <constraint firstItem="tFc-2J-V5W" firstAttribute="leading" secondItem="lcu-iD-7h3" secondAttribute="trailing" constant="20" id="At8-sc-pL2"/>
                                             <constraint firstItem="qop-ft-rP3" firstAttribute="top" secondItem="OSS-JF-Bad" secondAttribute="bottom" constant="20" id="Dh6-ip-yLd"/>
                                             <constraint firstItem="lcu-iD-7h3" firstAttribute="width" secondItem="bCC-e4-1tU" secondAttribute="width" multiplier="0.35" id="FWU-rm-Paa"/>
                                             <constraint firstItem="qop-ft-rP3" firstAttribute="trailing" secondItem="OSS-JF-Bad" secondAttribute="trailing" id="Gdv-zu-JDW"/>
-                                            <constraint firstAttribute="bottom" secondItem="bci-yn-6X9" secondAttribute="bottom" constant="20" id="IN6-oc-OVn"/>
                                             <constraint firstItem="uqs-Bz-RM6" firstAttribute="centerY" secondItem="lcu-iD-7h3" secondAttribute="centerY" id="Iyp-Dx-QHl"/>
-                                            <constraint firstAttribute="height" constant="744" id="Lfs-2z-w3X"/>
+                                            <constraint firstAttribute="height" constant="720" id="Lfs-2z-w3X"/>
                                             <constraint firstAttribute="trailing" secondItem="OSS-JF-Bad" secondAttribute="trailing" constant="30" id="Lhg-xj-bGu"/>
                                             <constraint firstItem="Kcl-91-wEj" firstAttribute="top" secondItem="bCC-e4-1tU" secondAttribute="top" id="OL6-3b-7Rk"/>
                                             <constraint firstItem="OSS-JF-Bad" firstAttribute="top" secondItem="bLX-ac-fOk" secondAttribute="bottom" constant="20" id="T14-R4-nxe"/>
@@ -211,6 +211,7 @@
                     <connections>
                         <outlet property="EmailVCBgHeight" destination="Lfs-2z-w3X" id="Nv9-5J-2VN"/>
                         <outlet property="email" destination="Azq-8i-4gE" id="RHF-S3-sxP"/>
+                        <outlet property="scrolleView" destination="Joa-wO-bEU" id="WXz-K7-wha"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -679,10 +680,10 @@ isn’t available.</string>
             </objects>
             <point key="canvasLocation" x="38" y="786"/>
         </scene>
-        <!--View Controller-->
+        <!--Connection LostVC-->
         <scene sceneID="JhL-1t-cGl">
             <objects>
-                <viewController id="WbS-JN-2c6" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConnectionLostVC" id="WbS-JN-2c6" customClass="ConnectionLostVC" customModule="Marier" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rsQ-CC-ZDy">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -723,6 +724,9 @@ isn’t available.</string>
                                                         <integer key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tryTapped:" destination="WbS-JN-2c6" eventType="touchUpInside" id="Djd-iC-kvB"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -779,16 +783,16 @@ isn’t available.</string>
                                 <rect key="frame" x="0.0" y="47" width="390" height="763"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zd2-cU-y1t">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="220"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="700"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQN-kp-l8Z">
-                                                <rect key="frame" x="20" y="10" width="122" height="40"/>
+                                                <rect key="frame" x="134" y="5" width="122" height="40"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yc5-B5-oyy" customClass="ThemeButton" customModule="Marier" customModuleProvider="target">
-                                                <rect key="frame" x="39" y="150" width="312" height="50"/>
+                                                <rect key="frame" x="39" y="630" width="312" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="deJ-cN-XdV"/>
                                                 </constraints>
@@ -799,11 +803,8 @@ isn’t available.</string>
                                                 </connections>
                                             </button>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vWO-Mg-3FC">
-                                                <rect key="frame" x="0.0" y="50" width="390" height="100"/>
+                                                <rect key="frame" x="0.0" y="55" width="390" height="555"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="100" id="1sw-mu-uT7"/>
-                                                </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Y59-4R-YA0">
                                                     <size key="itemSize" width="149" height="104"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -816,18 +817,33 @@ isn’t available.</string>
                                                     <outlet property="delegate" destination="10X-Ce-Uk5" id="khv-0X-2Mw"/>
                                                 </connections>
                                             </collectionView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjM-kT-TS9">
+                                                <rect key="frame" x="10" y="5" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Gxr-ng-b77"/>
+                                                    <constraint firstAttribute="width" constant="40" id="Q5L-4a-LXA"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="back"/>
+                                                <connections>
+                                                    <action selector="backTapped:" destination="10X-Ce-Uk5" eventType="touchUpInside" id="ehw-Py-qFe"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstItem="qQN-kp-l8Z" firstAttribute="centerX" secondItem="zd2-cU-y1t" secondAttribute="centerX" id="50t-Fu-DYy"/>
                                             <constraint firstItem="yc5-B5-oyy" firstAttribute="width" secondItem="zd2-cU-y1t" secondAttribute="width" multiplier="0.8" id="5uc-YN-PdX"/>
                                             <constraint firstItem="yc5-B5-oyy" firstAttribute="centerX" secondItem="zd2-cU-y1t" secondAttribute="centerX" id="FY1-S4-EzN"/>
-                                            <constraint firstItem="yc5-B5-oyy" firstAttribute="top" secondItem="vWO-Mg-3FC" secondAttribute="bottom" id="RsM-LF-v78"/>
+                                            <constraint firstAttribute="height" constant="700" id="H70-mP-ozq"/>
+                                            <constraint firstItem="qQN-kp-l8Z" firstAttribute="top" secondItem="zd2-cU-y1t" secondAttribute="top" constant="5" id="IIh-q0-n2M"/>
+                                            <constraint firstItem="vWO-Mg-3FC" firstAttribute="top" secondItem="qQN-kp-l8Z" secondAttribute="bottom" constant="10" id="KVr-Co-fF0"/>
+                                            <constraint firstItem="yc5-B5-oyy" firstAttribute="top" secondItem="vWO-Mg-3FC" secondAttribute="bottom" constant="20" id="OWj-Le-YV9"/>
                                             <constraint firstAttribute="bottom" secondItem="yc5-B5-oyy" secondAttribute="bottom" constant="20" id="SSS-el-p9b"/>
-                                            <constraint firstItem="qQN-kp-l8Z" firstAttribute="leading" secondItem="zd2-cU-y1t" secondAttribute="leading" constant="20" id="YMW-dG-EKd"/>
                                             <constraint firstItem="vWO-Mg-3FC" firstAttribute="leading" secondItem="zd2-cU-y1t" secondAttribute="leading" id="Z8l-vE-F0h"/>
-                                            <constraint firstItem="vWO-Mg-3FC" firstAttribute="top" secondItem="qQN-kp-l8Z" secondAttribute="bottom" id="bHj-5r-aDO"/>
+                                            <constraint firstItem="mjM-kT-TS9" firstAttribute="centerY" secondItem="qQN-kp-l8Z" secondAttribute="centerY" id="b6O-ME-yfb"/>
                                             <constraint firstAttribute="trailing" secondItem="vWO-Mg-3FC" secondAttribute="trailing" id="g1N-sh-Kt9"/>
-                                            <constraint firstItem="qQN-kp-l8Z" firstAttribute="top" secondItem="zd2-cU-y1t" secondAttribute="top" constant="10" id="x3K-vP-nDr"/>
+                                            <constraint firstItem="mjM-kT-TS9" firstAttribute="leading" secondItem="zd2-cU-y1t" secondAttribute="leading" constant="10" id="q2u-RS-w7h"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -835,6 +851,7 @@ isn’t available.</string>
                                     <constraint firstItem="zd2-cU-y1t" firstAttribute="width" secondItem="wFE-vf-8SU" secondAttribute="width" id="2Ro-dG-3th"/>
                                     <constraint firstItem="zd2-cU-y1t" firstAttribute="bottom" secondItem="Qsl-vz-7Ss" secondAttribute="bottom" id="6kY-ta-FCx"/>
                                     <constraint firstItem="zd2-cU-y1t" firstAttribute="leading" secondItem="Qsl-vz-7Ss" secondAttribute="leading" id="Cpk-Ur-eAi"/>
+                                    <constraint firstItem="zd2-cU-y1t" firstAttribute="top" secondItem="wFE-vf-8SU" secondAttribute="top" id="a8n-yv-YDN"/>
                                     <constraint firstItem="zd2-cU-y1t" firstAttribute="top" secondItem="Qsl-vz-7Ss" secondAttribute="top" id="j0D-ea-9Xt"/>
                                     <constraint firstItem="zd2-cU-y1t" firstAttribute="trailing" secondItem="Qsl-vz-7Ss" secondAttribute="trailing" id="lPV-fw-eZN"/>
                                 </constraints>
@@ -1223,7 +1240,7 @@ isn’t available.</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vpW-9E-ShI">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z22-gV-K0A">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z22-gV-K0A">
                                                 <rect key="frame" x="0.0" y="48" width="50" height="2"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -1254,7 +1271,7 @@ isn’t available.</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YBJ-49-kbb">
                                         <rect key="frame" x="54.999999999999986" y="0.0" width="50" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6b-zl-VNP">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6b-zl-VNP">
                                                 <rect key="frame" x="0.0" y="48" width="50" height="2"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -1285,7 +1302,7 @@ isn’t available.</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J21-Cv-3qM">
                                         <rect key="frame" x="110" y="0.0" width="50" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KjX-se-9Pb">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KjX-se-9Pb">
                                                 <rect key="frame" x="0.0" y="48" width="50" height="2"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -1316,7 +1333,7 @@ isn’t available.</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v3s-Hj-TOz">
                                         <rect key="frame" x="165" y="0.0" width="50" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vS4-Oe-gUg">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vS4-Oe-gUg">
                                                 <rect key="frame" x="0.0" y="48" width="50" height="2"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
