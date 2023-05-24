@@ -66,4 +66,11 @@ class ApiManger: UIViewController{
         }}
         
     }
+    
+    // MARK: - THIS IS UPDATE API
+    
+    func updateApi(model: UpdateApiParmes, compilation: @escaping()-> Void){
+        
+    }
+    
 }

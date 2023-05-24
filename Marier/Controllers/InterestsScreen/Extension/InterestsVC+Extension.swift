@@ -21,6 +21,6 @@ extension InterestsVC: UICollectionViewDelegate,UICollectionViewDataSource,UICol
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width/3.3, height: collectionView.frame.height/2.3)
+        return CGSize(width: collectionView.frame.width/3.3, height: 50)
     }
 }

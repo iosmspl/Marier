@@ -134,6 +134,7 @@
 		76E7C47D2A1CDE0300AC1786 /* ConnectionLostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E7C47C2A1CDE0300AC1786 /* ConnectionLostVC.swift */; };
 		76EBC3A62A1497BF00ABC51A /* TermCondtionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EBC3A52A1497BF00ABC51A /* TermCondtionVC.swift */; };
 		76F669D929F907CB00277C47 /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F669D829F907CB00277C47 /* FilterVC.swift */; };
+		76F6F7D52A1DDC6E00520277 /* UpdateApiStruture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F6F7D42A1DDC6E00520277 /* UpdateApiStruture.swift */; };
 		76F736E02A01325B00955090 /* FilterVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F736DF2A01325B00955090 /* FilterVC+Extension.swift */; };
 		C311A62F7CF0CB2C93698E25 /* Pods_MarierTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6445B1B308E06AA0BA00AF23 /* Pods_MarierTests.framework */; };
 /* End PBXBuildFile section */
@@ -287,6 +288,7 @@
 		76E7C47C2A1CDE0300AC1786 /* ConnectionLostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionLostVC.swift; sourceTree = "<group>"; };
 		76EBC3A52A1497BF00ABC51A /* TermCondtionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermCondtionVC.swift; sourceTree = "<group>"; };
 		76F669D829F907CB00277C47 /* FilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
+		76F6F7D42A1DDC6E00520277 /* UpdateApiStruture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateApiStruture.swift; sourceTree = "<group>"; };
 		76F736DF2A01325B00955090 /* FilterVC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FilterVC+Extension.swift"; sourceTree = "<group>"; };
 		9B1BE5C9AFD3AD4FBA96CD8B /* Pods-MarierTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarierTests.debug.xcconfig"; path = "Target Support Files/Pods-MarierTests/Pods-MarierTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A75B7B9E815955A22C3616B5 /* Pods-Marier-MarierUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marier-MarierUITests.release.xcconfig"; path = "Target Support Files/Pods-Marier-MarierUITests/Pods-Marier-MarierUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -476,6 +478,7 @@
 			isa = PBXGroup;
 			children = (
 				76452EDD2A1B30C1000C53D6 /* UserModel.swift */,
+				76F6F7D42A1DDC6E00520277 /* UpdateApiStruture.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1507,6 +1510,7 @@
 				769B24052A0E21EB00ECDB58 /* RequestHelpVC.swift in Sources */,
 				76460FF12A03883E007C2B36 /* MatchedVC.swift in Sources */,
 				76F669D929F907CB00277C47 /* FilterVC.swift in Sources */,
+				76F6F7D52A1DDC6E00520277 /* UpdateApiStruture.swift in Sources */,
 				768E9F442A0909B3006BB4DE /* PaidCoinSubVC+Extension.swift in Sources */,
 				769A55CB29E3EE660074658D /* DetailProfileVC+Extension.swift in Sources */,
 				765337FD2A1253680009DA51 /* MessageVC.swift in Sources */,

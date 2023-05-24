@@ -1403,6 +1403,7 @@ isn’t available.</string>
                     <connections>
                         <outlet property="firstTxtField" destination="JH5-Ga-s6g" id="VN4-kA-BzT"/>
                         <outlet property="fourthTxtField" destination="cuO-Up-pXA" id="W7F-ss-xhR"/>
+                        <outlet property="lblCodeSent" destination="irh-hW-UYM" id="JXF-0g-Fg5"/>
                         <outlet property="secondTxtField" destination="tvS-bU-AZU" id="Uz1-U1-lcE"/>
                         <outlet property="thirdTxtField" destination="qeI-hV-Sgw" id="Atf-4b-rHg"/>
                     </connections>

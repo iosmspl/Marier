@@ -6,9 +6,10 @@
 //
 
 import UIKit
-
+import CoreLocation
 class PersonalVC: UIViewController {
-
+    let locationManger = CLLocationManager()
+    let geocoder =  CLGeocoder()
     @IBOutlet weak var nameTxtField: UITextField!
     @IBOutlet weak var BirthTxtField: UITextField!
     
@@ -17,15 +18,21 @@ class PersonalVC: UIViewController {
     
     @IBOutlet weak var sexualityTableHeight: NSLayoutConstraint!
     @IBOutlet weak var genderTableHeight: NSLayoutConstraint!
-    
+    var longatude_: CLLocationDegrees?
+    var latitude_: CLLocationDegrees?
     let genderArray = ["Male","Female","Non-Binary","Transgender Female","Transgender"]
     let sexualityArray = ["Straight","Gay","Lesbian","Bisexual","Pensexual","Transgender"]
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        locationManger.requestWhenInUseAuthorization()
+        locationManger.delegate = self
+        locationManger.startUpdatingLocation()
         // Do any additional setup after loading the view.
     }
+    
+    
+    
     override func loadView() {
         super.loadView()
         sexualityTable.register(UINib(nibName: "PersonalTableCell", bundle: nil), forCellReuseIdentifier: "PersonalTableCell")
@@ -42,10 +49,15 @@ class PersonalVC: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     @IBAction func proceedTapped(_ sender: Any){
-        let vc = StoryBoards.auth.instantiateViewController(withIdentifier: "InterestsVC") as! InterestsVC
-        self.navigationController?.pushViewController(vc, animated: true)
+        
+       
+            
+        
+            
+//        let vc = StoryBoards.auth.instantiateViewController(withIdentifier: "InterestsVC") as! InterestsVC
+//        self.navigationController?.pushViewController(vc, animated: true)
     }
-    
+
     /*
     // MARK: - Navigation
 

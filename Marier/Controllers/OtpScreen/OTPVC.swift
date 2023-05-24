@@ -9,7 +9,8 @@ import UIKit
 import ARSLineProgress
 //import OTPTextField
 class OTPVC: UIViewController {
-
+    @IBOutlet weak var lblCodeSent: UILabel!
+    
     @IBOutlet weak var firstTxtField: UITextField!
     @IBOutlet weak var secondTxtField: UITextField!
     @IBOutlet weak var thirdTxtField: UITextField!
@@ -17,6 +18,7 @@ class OTPVC: UIViewController {
     var resend: String?
     override func viewDidLoad() {
         super.viewDidLoad()
+        lblCodeSent.text = "Please enter the 4-digit code sent to you at \(Defaults.defaultClass.mailOrNumber)"
                 let textFieldArray = [firstTxtField,secondTxtField,thirdTxtField,fourthTxtField]
         for filed in textFieldArray {
             filed?.delegate = self
@@ -71,7 +73,6 @@ class OTPVC: UIViewController {
                  ARSLineProgress.hide()
                  if isSuccess {
                      print("|otpvc|\(resdata?.message!)")
-
                  }
              }
 
