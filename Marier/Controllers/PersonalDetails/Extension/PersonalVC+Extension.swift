@@ -21,6 +21,11 @@ extension PersonalVC: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PersonalTableCell", for: indexPath) as! PersonalTableCell
         if tableView == genderTable{
+            cell.cellImage.image = UIImage(named: "inactiveRadio") // activeRadio
+            if selectGender != nil && indexPath.row == selectGender{
+                cell.cellImage.image = UIImage(named: "activeRadio")
+               
+            }
             cell.cellLabel.text = genderArray[indexPath.row]
         }else{
             cell.cellLabel.text = sexualityArray[indexPath.row]
@@ -29,6 +34,12 @@ extension PersonalVC: UITableViewDelegate,UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         self.updateConstraints()
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if tableView == genderTable {
+            selectGender = indexPath.row
+            genderTable.reloadData()
+        }
     }
     
 }

@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreLocation
+import ARSLineProgress
 class PersonalVC: UIViewController {
     let locationManger = CLLocationManager()
     let geocoder =  CLGeocoder()
@@ -18,6 +19,8 @@ class PersonalVC: UIViewController {
     
     @IBOutlet weak var sexualityTableHeight: NSLayoutConstraint!
     @IBOutlet weak var genderTableHeight: NSLayoutConstraint!
+    var selectGender: Int?
+    var address: String?
     var longatude_: CLLocationDegrees?
     var latitude_: CLLocationDegrees?
     let genderArray = ["Male","Female","Non-Binary","Transgender Female","Transgender"]
@@ -25,8 +28,9 @@ class PersonalVC: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        locationManger.requestWhenInUseAuthorization()
         locationManger.delegate = self
+        locationManger.requestWhenInUseAuthorization()
+       
         locationManger.startUpdatingLocation()
         // Do any additional setup after loading the view.
     }
@@ -49,13 +53,42 @@ class PersonalVC: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     @IBAction func proceedTapped(_ sender: Any){
+        ARSLineProgress.show()
+        if latitude_ == nil || longatude_ == nil {
+            latitude_ = 0
+            longatude_ = 0
+            address = ""
+        }
         
-       
+        if nameTxtField.text == "" || BirthTxtField.text == "" || selectGender == nil{
+            ARSLineProgress.hide()
+            AlertDisplay(AlertTitle: "Missing", Message: "please fill all the details", Actiontitle: "ok")
+        }else{
+            var sex: String?
+            if selectGender! >= 0 && selectGender! <= 1{
+                sex = genderArray[selectGender!].lowercased()
+            }else{
+                sex = "other"
+            }
+           
+            let parem = UpdateApiParmes(name: nameTxtField.text, phoneNumber: "", sex: sex, dob: BirthTxtField.text, address: address, setting: Settings(location: Loc(type: "Point", coordinates: ["\(latitude_!) ", "\(longatude_!)"]), ageRange: ageRang(to: nil, from: nil), distance: nil, sexType: "", language: ""))
+            ApiManger.Shared.updateApi(model: parem) { resData, isSuccess in
+                if isSuccess {
+                ARSLineProgress.hide()
+                let vc = StoryBoards.auth.instantiateViewController(withIdentifier: "InterestsVC") as! InterestsVC
+                self.navigationController?.pushViewController(vc, animated: true)
+                }
+                else{
+                    ARSLineProgress.hide()
+                    self.AlertDisplay(AlertTitle: "Somthing went wrong", Message: "", Actiontitle: "OK")
+                }
+            }
+        }
+        
             
         
             
-//        let vc = StoryBoards.auth.instantiateViewController(withIdentifier: "InterestsVC") as! InterestsVC
-//        self.navigationController?.pushViewController(vc, animated: true)
+
     }
 
     /*

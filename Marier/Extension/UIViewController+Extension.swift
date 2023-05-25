@@ -54,7 +54,7 @@ extension UIViewController{
     }
 
     func isPhoneNumber(_ string: String) -> Bool {
-        let phoneRegex = "^\\d{10}$" // Assuming a 10-digit phone number format
+        let phoneRegex = "^\\d{8,14}$" // Assuming a 8 to 14 btw digit phone number format
         let phonePredicate = NSPredicate(format: "SELF MATCHES %@", phoneRegex)
         return phonePredicate.evaluate(with: string)
     }

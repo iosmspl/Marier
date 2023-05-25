@@ -36,6 +36,11 @@ struct TokenStr: Codable{
         let data: dataObj?
         let message: String?
         let token: String?
+        enum CodingKeys: String,CodingKey {
+            case data = "data"
+            case message = "message"
+            case token = "token"
+        }
     }
     struct dataObj: Codable{
         let avatar: String?
@@ -65,7 +70,7 @@ struct TokenStr: Codable{
     }
     struct LocationData: Codable{
         let type: String?
-        let coordinates: [String]?
+        let coordinates: [Double]?
     }
     struct AgeRange: Codable{
         let to: Int?
@@ -104,5 +109,11 @@ struct ageRang: Encodable{
 //------------parameter------------------end
 
 struct updateApiRes: Codable{
-    
+    let message: String?
+    let data: updateApiData?
 }
+struct updateApiData: Codable{
+    let _id,token: String?
+}
+
+
