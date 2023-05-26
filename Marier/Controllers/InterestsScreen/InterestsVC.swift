@@ -11,7 +11,9 @@ class InterestsVC: UIViewController{
     
     @IBOutlet weak var interestsCollectionView: UICollectionView!
     let arr1 = ["Weightlifting","Potterhead","Dancing","politics","Vinyasa","Sailing"]
-
+    var  interestArray = [GetallInterData]()
+    var selectedIntersArr = [String]()
+    var selectedIndexs = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
         interestsCollectionView.register(UINib(nibName: "InterestsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "InterestsCollectionViewCell")
@@ -20,8 +22,17 @@ class InterestsVC: UIViewController{
     
     
     @IBAction func SubmitTapped(_ sender: UIButton){
-        let vc = StoryBoards.auth.instantiateViewController(withIdentifier: "AddImageVC") as! AddImageVC
-        self.navigationController?.pushViewController(vc, animated: true)
+
+        if selectedIndexs.isEmpty{
+            AlertDisplay(AlertTitle: "Please Select at least one interest", Message: "", Actiontitle: "OK")
+        }else{
+            
+        }
+
+                
+                 
+//        let vc = StoryBoards.auth.instantiateViewController(withIdentifier: "AddImageVC") as! AddImageVC
+//        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 

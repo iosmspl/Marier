@@ -39,9 +39,10 @@ class OTPVC: UIViewController {
                 ARSLineProgress.show()
                 let otpText: String = fourthTxtField.text! + secondTxtField.text! + thirdTxtField.text! + fourthTxtField.text!
                 let otpmodel = Otp(otp: otpText)
-                ApiManger.Shared.OtpVerify(otp: otpmodel) { resData, isSuccess in
+                ApiManger.Shared.OtpVerify(otp: otpmodel) { resData,phoneNo, isSuccess in
                     if isSuccess == true {
                         ARSLineProgress.hide()
+                        print("\\|\(phoneNo)|")
                         let vc = StoryBoards.auth.instantiateViewController(withIdentifier: "BasicGuideLinesVC") as! BasicGuideLinesVC
                         self.navigationController?.pushViewController(vc, animated: true)
                     }else{

@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ywO-CX-Bnn" customClass="GrayBorderView" customModule="Marier" customModuleProvider="target">
-                        <rect key="frame" x="10" y="10" width="429" height="158"/>
+                        <rect key="frame" x="5" y="10" width="429" height="158"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKT-dW-Ay6">
                                 <rect key="frame" x="10" y="10" width="409" height="138"/>
@@ -45,13 +45,14 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="ywO-CX-Bnn" secondAttribute="trailing" id="F80-51-MIx"/>
+                <constraint firstAttribute="trailing" secondItem="ywO-CX-Bnn" secondAttribute="trailing" constant="5" id="F80-51-MIx"/>
                 <constraint firstItem="ywO-CX-Bnn" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="Lhb-Iw-8ca"/>
                 <constraint firstAttribute="bottom" secondItem="ywO-CX-Bnn" secondAttribute="bottom" id="UXy-Nh-aur"/>
-                <constraint firstItem="ywO-CX-Bnn" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="ang-7J-IO0"/>
+                <constraint firstItem="ywO-CX-Bnn" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="ang-7J-IO0"/>
             </constraints>
             <size key="customSize" width="439" height="168"/>
             <connections>
+                <outlet property="ViewInterests" destination="ywO-CX-Bnn" id="y4T-NR-tFu"/>
                 <outlet property="lblInterests" destination="PKT-dW-Ay6" id="Fhe-Mk-pqX"/>
             </connections>
             <point key="canvasLocation" x="353.43511450381681" y="4.9295774647887329"/>

@@ -10,7 +10,7 @@ import UIKit
 class InterestsCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var lblInterests: UILabel!
-    
+    @IBOutlet weak var ViewInterests: GrayBorderView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

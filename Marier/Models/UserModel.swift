@@ -45,7 +45,7 @@ struct TokenStr: Codable{
     struct dataObj: Codable{
         let avatar: String?
         let sexualOrientations: [String]?
-        let phoneNumber: Decimal?
+//        let phoneNumber: NSNumber?
         let interests: [String]?
         let socialLogin: SocialLogin?
         let createdAt, updatedAt, status, email: String?
@@ -78,12 +78,12 @@ struct TokenStr: Codable{
     }
     
     
-//MARK: - UPDATE USER API MODEL
+//MARK: - UPDATE USER API  MODEL
 
 // ----------parameter--------------- start
 struct UpdateApiParmes: Encodable{
     let name: String?
-    let phoneNumber: String?
+//    let phoneNumber: String?
     let sex: String?
     let dob: String?
     let address: String?
@@ -91,10 +91,10 @@ struct UpdateApiParmes: Encodable{
 }
 struct Settings: Encodable{
     let location: Loc?
-    let ageRange: ageRang?
-    let distance: Int?
-    let sexType: String?
-    let language: String?
+//    let ageRange: ageRang?
+//    let distance: Int?
+//    let sexType: String?
+//    let language: String?
     
 }
 struct Loc: Encodable{
@@ -107,7 +107,7 @@ struct ageRang: Encodable{
     let from: Int?
 }
 //------------parameter------------------end
-
+//-------------RESPONSE------------------star
 struct updateApiRes: Codable{
     let message: String?
     let data: updateApiData?
@@ -115,5 +115,26 @@ struct updateApiRes: Codable{
 struct updateApiData: Codable{
     let _id,token: String?
 }
+//-------------^^^^^^--------------------end
 
+
+//MARK: - GETALL INTEREST   API MODEL-------
+
+struct GetAllInterests: Codable {
+    let message: String?
+    let data: [GetallInterData]?
+}
+struct GetallInterData: Codable{
+    let _id: String?
+    let interest: String?
+    enum CodingKeys:  String,CodingKey {
+        case _id
+        case interest = "type"
+    }
+}
+
+//MARK: - INTEREST UPDATE API ---------------
+struct updateInterestApi: Encodable{
+    let interests: [String]?
+}
 

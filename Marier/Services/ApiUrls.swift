@@ -10,6 +10,6 @@ import Foundation
 struct ApiUrls{
     public static let loginOtpUrl =  BaseUrl+"/users/loginOtp"
     public static let otpVerify   =  BaseUrl+"/users/loginOtpVerification"
-    public static let upDateApi   =  BaseUrl+"/users/update/"
-
+    public static let upDateApi   =  BaseUrl+"/users/update/"         ///  /interests/getAll
+    public static let getAllInterests = BaseUrl+"/interests/getAll"
 }

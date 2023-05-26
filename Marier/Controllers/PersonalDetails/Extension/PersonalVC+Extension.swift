@@ -53,7 +53,10 @@ extension PersonalVC: CLLocationManagerDelegate{
             longatude_ = (location.coordinate.longitude)
             locationManger.stopUpdatingLocation()
             reverseGeocoding(latitude: latitude_ ?? CLLocationDegrees(0), longitude: longatude_ ?? CLLocationDegrees(0)) { addres in
-                print("\(addres)")
+//                print("\(addres)")
+                
+                self.addressUser = addres
+                
             }
         }
     }

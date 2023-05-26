@@ -20,7 +20,7 @@ class PersonalVC: UIViewController {
     @IBOutlet weak var sexualityTableHeight: NSLayoutConstraint!
     @IBOutlet weak var genderTableHeight: NSLayoutConstraint!
     var selectGender: Int?
-    var address: String?
+    var addressUser: String?
     var longatude_: CLLocationDegrees?
     var latitude_: CLLocationDegrees?
     let genderArray = ["Male","Female","Non-Binary","Transgender Female","Transgender"]
@@ -57,7 +57,7 @@ class PersonalVC: UIViewController {
         if latitude_ == nil || longatude_ == nil {
             latitude_ = 0
             longatude_ = 0
-            address = ""
+            addressUser = ""
         }
         
         if nameTxtField.text == "" || BirthTxtField.text == "" || selectGender == nil{
@@ -71,12 +71,24 @@ class PersonalVC: UIViewController {
                 sex = "other"
             }
            
-            let parem = UpdateApiParmes(name: nameTxtField.text, phoneNumber: "", sex: sex, dob: BirthTxtField.text, address: address, setting: Settings(location: Loc(type: "Point", coordinates: ["\(latitude_!) ", "\(longatude_!)"]), ageRange: ageRang(to: nil, from: nil), distance: nil, sexType: "", language: ""))
+            let parem = UpdateApiParmes(name: nameTxtField.text, sex: sex, dob: BirthTxtField.text, address: addressUser, setting: Settings(location: Loc(type: "Point", coordinates: ["\(latitude_!)", "\(longatude_!)"])))
             ApiManger.Shared.updateApi(model: parem) { resData, isSuccess in
                 if isSuccess {
                 ARSLineProgress.hide()
                 let vc = StoryBoards.auth.instantiateViewController(withIdentifier: "InterestsVC") as! InterestsVC
-                self.navigationController?.pushViewController(vc, animated: true)
+                
+                    ApiManger.Shared.getAllInterApi { resdataInterest, isSuccess in
+                        if isSuccess {
+                            vc.interestArray = (resdataInterest?.data)!
+                            self.navigationController?.pushViewController(vc, animated: true)
+//                            print("\(resdataInterest?.data?[0]._id)")
+//                            print("\(resdataInterest?.data?[0].interest)")
+                        }else{
+                            print("somthing wrong personal")
+                        }
+                    }
+                
+                
                 }
                 else{
                     ARSLineProgress.hide()
