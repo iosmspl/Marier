@@ -20,18 +20,27 @@ class PersonalVC: UIViewController {
     @IBOutlet weak var sexualityTableHeight: NSLayoutConstraint!
     @IBOutlet weak var genderTableHeight: NSLayoutConstraint!
     var selectGender: Int?
+    var SexualityArrayApi = [getAllsexuality]()
     var addressUser: String?
     var longatude_: CLLocationDegrees?
     var latitude_: CLLocationDegrees?
     let genderArray = ["Male","Female","Non-Binary","Transgender Female","Transgender"]
     let sexualityArray = ["Straight","Gay","Lesbian","Bisexual","Pensexual","Transgender"]
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManger.delegate = self
         locationManger.requestWhenInUseAuthorization()
        
         locationManger.startUpdatingLocation()
+        
+        ApiManger.Shared.getAllsexuality { resdata, isSucces in
+            if isSucces{
+                let array = (resdata?.data)!
+                self.SexualityArrayApi = array
+                
+            }
+        }
         // Do any additional setup after loading the view.
     }
     
@@ -53,6 +62,7 @@ class PersonalVC: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     @IBAction func proceedTapped(_ sender: Any){
+        print("this is sexulaityArray\(SexualityArrayApi)")
         ARSLineProgress.show()
         if latitude_ == nil || longatude_ == nil {
             latitude_ = 0

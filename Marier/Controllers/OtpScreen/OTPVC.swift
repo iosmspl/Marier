@@ -37,7 +37,8 @@ class OTPVC: UIViewController {
                 print("please enter all the fileds")
             }else{
                 ARSLineProgress.show()
-                let otpText: String = fourthTxtField.text! + secondTxtField.text! + thirdTxtField.text! + fourthTxtField.text!
+                let otpText: String = firstTxtField.text! + secondTxtField.text! + thirdTxtField.text! + fourthTxtField.text!
+                print("\(otpText)")
                 let otpmodel = Otp(otp: otpText)
                 ApiManger.Shared.OtpVerify(otp: otpmodel) { resData,phoneNo, isSuccess in
                     if isSuccess == true {

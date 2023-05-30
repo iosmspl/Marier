@@ -6,7 +6,8 @@
 //
 
 import UIKit
-
+import Alamofire
+import ARSLineProgress
 class AddImageVC: UIViewController {
     @IBOutlet weak var AddImgCollection: UICollectionView!
     var imgArray = [UIImage]()
@@ -23,9 +24,28 @@ class AddImageVC: UIViewController {
     }
     
     @IBAction func submitTapped(_ sender: UIButton) {
+//        print("===\(imgArray)==")
+       
         
-        let vc = StoryBoards.Discover.instantiateViewController(withIdentifier: "TabBarVc") as! TabBarVc
-        self.navigationController?.pushViewController(vc, animated: true)
+        if imgArray.isEmpty{
+            AlertDisplay(AlertTitle: "Please Select at least one image", Message: "", Actiontitle: "OK")
+        }else{
+            ARSLineProgress.show()
+            ApiManger.Shared.uploadImagesApi(images: imgArray) { isSucces, error in
+                print("Complilation")
+                if isSucces{
+                    ARSLineProgress.hide()
+                    let vc = StoryBoards.Discover.instantiateViewController(withIdentifier: "TabBarVc") as! TabBarVc
+                           self.navigationController?.pushViewController(vc, animated: true)
+                }else{
+                    ARSLineProgress.hide()
+                    self.AlertDisplay(AlertTitle: "Somthing Went Wrong ", Message: "", Actiontitle: "OK")
+                }
+                
+            }
+        }
+//        let vc = StoryBoards.Discover.instantiateViewController(withIdentifier: "TabBarVc") as! TabBarVc
+//        self.navigationController?.pushViewController(vc, animated: true)
         
     }
     

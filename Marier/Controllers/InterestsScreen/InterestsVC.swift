@@ -23,11 +23,20 @@ class InterestsVC: UIViewController{
     
     @IBAction func SubmitTapped(_ sender: UIButton){
 
-        if selectedIndexs.isEmpty{
-            AlertDisplay(AlertTitle: "Please Select at least one interest", Message: "", Actiontitle: "OK")
-        }else{
-            
-        }
+//        if selectedIntersArr.isEmpty{
+//            AlertDisplay(AlertTitle: "Please Select at least one interest", Message: "", Actiontitle: "OK")
+//        }else{
+//            let model = updateInterestApi(interests: selectedIntersArr)
+//            ApiManger.Shared.updateInterest(model: model) { resdata, isSuccess in
+//                print("api compilation")
+//                if isSuccess{
+                    let vc = StoryBoards.auth.instantiateViewController(withIdentifier: "AddImageVC") as! AddImageVC
+                            self.navigationController?.pushViewController(vc, animated: true)
+//                }else{
+//                    print("not sucess")
+//                }
+//            }
+       // }
 
                 
                  

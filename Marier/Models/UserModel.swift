@@ -53,7 +53,7 @@ struct TokenStr: Codable{
         let id, uuid: String?
         let setting: Setting?
         let ipAddress, platform: String?
-        let gallery: [String]?
+        let gallery: [Gallery]?
         
             }
     struct SocialLogin: Codable{
@@ -76,6 +76,10 @@ struct TokenStr: Codable{
         let to: Int?
         let from: Int?
     }
+struct Gallery: Codable{
+    let image: String?
+    let _id: String?
+}
     
     
 //MARK: - UPDATE USER API  MODEL
@@ -117,6 +121,8 @@ struct updateApiData: Codable{
 }
 //-------------^^^^^^--------------------end
 
+// MARK: - SEXUALORIENTAION API
+
 
 //MARK: - GETALL INTEREST   API MODEL-------
 
@@ -132,6 +138,28 @@ struct GetallInterData: Codable{
         case interest = "type"
     }
 }
+    // MARK: - GET ALL SEXUALORIENTAION STRUC -----
+
+struct sexualOriention: Codable{
+    let message: String?
+    let data: [getAllsexuality]?
+}
+struct getAllsexuality: Codable{
+    let _id: String?
+    let sexuality: String?
+    enum CodingKeys: String,CodingKey {
+        case _id
+        case sexuality = "type"
+    }
+}
+
+// MARK: - ADD SEXUALORIENTAION
+// <-----------------PARAMETER---------->
+struct sexulaity: Encodable{
+    let sexualOrientations: [String]?
+}
+// -------------------------------------->
+
 
 //MARK: - INTEREST UPDATE API ---------------
 struct updateInterestApi: Encodable{

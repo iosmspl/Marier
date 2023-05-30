@@ -21,8 +21,8 @@ class ApiManger: UIViewController{
                         if status == 200{
                         let token = LoginData.data?.token ?? ""
                         Defaults.defaultClass.logintoken = token
-                            print("-----\(token) -----")
-                            print("-----\(Defaults.defaultClass.logintoken) -----")
+//                            print("-----\(token) -----")
+//                            print("-----\(Defaults.defaultClass.logintoken) -----")
 
                             compilation(true, LoginData)
                         }else{
@@ -49,10 +49,14 @@ class ApiManger: UIViewController{
             let json = try? JSONSerialization.jsonObject(with: data!) as? [String:Any]
             let respdata = try? JSONDecoder().decode(otpVerifyRes.self, from: data!)
             let status = response.response?.statusCode
+            print("||\(json!)||")
             if status == 200{
-//                print("||\(json!)||")
+                
                 let token = (respdata?.token)!
+//                print("----vr-\(token!)")
                 let Id = (respdata?.data?.id)!
+//                print("----vrid-\(Id)")
+
                 let jsonData = json?["data"] as? [String:Any]
 //                print("------->\(jsonData)")
 //                let  phone = "\((jsonData?["phoneNumber"])!)"
@@ -100,6 +104,7 @@ class ApiManger: UIViewController{
         }}
     }
     
+    
     // ----------------- MARK: - THIS IS GET ALL INTERESTS
     
     func getAllInterApi(compilation: @escaping(_ resdata: GetAllInterests? ,_ isSuccess: Bool)-> Void){
@@ -129,9 +134,103 @@ class ApiManger: UIViewController{
         }}
     }
     
+    //MARK: - THIS IS GET ALL SEXULAITY API
+    func getAllsexuality(comilation: @escaping(_ resdata: sexualOriention? ,_ isSucces: Bool)-> Void){
+        
+        AF.request(ApiUrls.sexualOrientionGetall,method: .get).response{response in  switch response.result{
+            
+        case .success(let data):
+            let json = try? JSONSerialization.jsonObject(with: data!) as? [String:Any]
+            let RespData = try? JSONDecoder().decode(sexualOriention.self, from: data!)
+            let status = response.response?.statusCode
+            if status == 200 {
+                print("---suc \(json!)")
+                comilation(RespData,true)
+            }else{
+                print("-\(status!) = \(json!)")
+                comilation(nil , false)
+            }
+            
+        case .failure(let error):
+            comilation(nil , false)
+            print("-F-\(error.localizedDescription)-=")
+        }
+            
+        }
+    }
+    
+    
+    // MARK: - THIS ADD SEXUAL ORIENTAION
+    
+    func addSexualOrientaion(comilation: @escaping(_ resdata: sexualOriention? ,_ isSucces: Bool)-> Void){
+        let headApi: HTTPHeaders = ["x-access-token": Defaults.defaultClass.token]
+        
+    }
+    
     //----------------MARK: - THIS IS UDATE INTERESTS-----------
     func updateInterest(model: updateInterestApi, compilation: @escaping(_ resdata: String? ,_ isSuccess:Bool )-> Void){
         
+        let token:String = Defaults.defaultClass.token
+        let headApi:HTTPHeaders = ["x-access-token": token]
+        AF.request(ApiUrls.addInterests+Defaults.defaultClass.id , method: .put , parameters: model, encoder: JSONParameterEncoder.default , headers: headApi).response{ response in switch response.result{
+            
+        case .success(let data):
+            let json = try? JSONSerialization.jsonObject(with: data!) as? [String:Any]
+//            let apiData = try? JSONDecoder().decode(<#T##type: Decodable.Protocol##Decodable.Protocol#>, from: <#T##Data#>)
+            let status = response.response?.statusCode
+            let data = json?["data"] as? String
+
+            if status == 200{
+                print("---addinters---\(json)----")
+//                let data = json?["data"] as? String
+                compilation(data, true)
+            }
+            else{
+                compilation(data, false)
+            }
+           
+        case .failure(let error):
+            compilation(nil ,false)
+            print("\(error)")
+        }}
     }
+    
+    //MARK: - THIS IS MULTI PHOTO UPLOAD API
+    func uploadImagesApi(images: [UIImage], completion: @escaping (_ isSuccess: Bool, _ errorMessage: String?) -> Void) {
+//        print("\(Defaults.defaultClass.id)")
+        
+//        let url = "http://marier.one:9001/api/v1/users/uploadImagesByUserId/646b529c6ba4d63cb9d56fa3"
+//        print("arr\(images)")
+        AF.upload(multipartFormData: { multipartFormData in
+            for (index, image) in images.enumerated() {
+                if let imageData = image.jpegData(compressionQuality: 0.5) ?? image.pngData() {
+                    let fileName = "image\(index)"
+                    let mimeType = image.jpegData(compressionQuality: 1.0) != nil ? "image/jpeg" : "image/png"
+                    
+                    multipartFormData.append(imageData, withName: "image", fileName: fileName, mimeType: mimeType)
+                }
+            }
+        }, to: ApiUrls.uploadImages+Defaults.defaultClass.id , method: .put).response { response in
+            if let statusCode = response.response?.statusCode {
+                switch response.result {
+                case .success(let data):
+                    if statusCode == 200 {
+                        let json = try? JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any]
+                        let message = json?["message"] as? String
+                        completion(true, message)
+                    } else {
+                        completion(false, "Unexpected response status code: \(statusCode)")
+                    }
+                case .failure(let error):
+                    completion(false, error.localizedDescription)
+                }
+            } else {
+                completion(false, "No response status code received")
+            }
+        }
+    }
+
+    
+
     
 }
