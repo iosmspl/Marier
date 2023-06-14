@@ -12,12 +12,44 @@ class LikeSuperLikeVC: UIViewController {
     @IBOutlet weak var Likebtn: UIButton!
     @IBOutlet weak var SuperLikebtn: UIButton!
     var selectedIndex = 0
+    var likedbyUserArray = [LikeByOtherData]()
+    var dislikeUsersArray = [DisLikeByOtherData]()
+    var isFetched = false
+//    var dislikedByOther
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//
+        if Defaults.defaultClass.dislikePageNo == nil {
+            Defaults.defaultClass.dislikePageNo = 1
+        }
         LikeSuperLikeCollectionView.register(UINib(nibName: "RecentPassCollectionCell", bundle: nil), forCellWithReuseIdentifier: "RecentPassCollectionCell")
         // Do any additional setup after loading the view.
     }
+    override func viewWillAppear(_ animated: Bool) {
+        // like by other
+        ApiManger.Shared.getlikesByOther { resdata, isSuccess in
+            if isSuccess{
+                self.likedbyUserArray = resdata?.data! ?? [LikeByOtherData]()
+                self.LikeSuperLikeCollectionView.reloadData()
+                self.LikeSuperLikeCollectionView.delegate = self
+            }else{
+                print("likesupervc to dekho")
+            }
+        }
+        
+        // dilike by other
+        ApiManger.Shared.getAlldislikes(pageNo: Defaults.defaultClass.dislikePageNo!, pageSize: 10) { resdata, isSuccess in
+            if isSuccess{
+                self.dislikeUsersArray = resdata?.data ?? [DisLikeByOtherData]()
+                self.LikeSuperLikeCollectionView.reloadData()
+                
+            }else{
+                print("like super like vc = fail")
+            }
+        }
+        
+    }
+    
     
     @IBAction func LikedTapped(_ sender: UIButton){
         Likebtn.backgroundColor = SetcolorRgb(red: 230, green: 84, blue: 160)

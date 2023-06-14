@@ -31,11 +31,14 @@ extension AddImageVC: PHPickerViewControllerDelegate,UICollectionViewDelegate{
     
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
         dismiss(animated: true)
-       // var index =  0                      // it is for imgArray indexing when user clicked again
+       // var index =  0
+        self.imgArray.removeAll()
+        // it is for imgArray indexing when user clicked again
         for result in results{
 //            print(results)
             result.itemProvider.loadObject(ofClass: UIImage.self) { object, error in
                 if let image = object as? UIImage{
+                    
                     self.imgArray.append(image)
 //                    print(image)
                 }

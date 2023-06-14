@@ -8,6 +8,7 @@
 import UIKit
 
 class MyPhotosVC: UIViewController {
+    var myphotsArray = [Gallery]()
     @IBOutlet weak var MyphotosCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()

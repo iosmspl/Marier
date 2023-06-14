@@ -6,10 +6,16 @@
 //
 
 import UIKit
-
+import AlamofireImage
 class ContainerVC: UIViewController {
     @IBOutlet weak var UserImgView: UIImageView!
-    
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var bio: UILabel!
+//    @IBOutlet weak var name: UILabel!
+
+    var image: String?
+    var nameStr: String?
+    var bioStr: String?
     var img:UIImage?
     var SwipeImage: UIImage?
     override func viewDidLoad() {
@@ -21,7 +27,10 @@ class ContainerVC: UIViewController {
     
     func restContent() {
         DispatchQueue.main.async {
-            self.UserImgView.image = self.img
+//            self.UserImgView.image = self.img
+            self.name.text = self.nameStr ?? "user"
+            self.bio.text = self.bioStr ?? "this is bio"
+            self.UserImgView.af.setImage(withURL: URL(string: self.image!)!)
         }
     }
     

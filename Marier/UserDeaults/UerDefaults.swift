@@ -11,6 +11,8 @@ import UIKit
 class Defaults{
     static let defaultClass = Defaults()
     private let defaults =  UserDefaults.standard
+    private let userDataKey = "userDataKey"
+    private let GalleryDataKey = "GalleryDataKey"
     // LoginOTP api token
     var logintoken: String{
         get{
@@ -45,6 +47,70 @@ class Defaults{
             defaults.set(newValue, forKey: "enterdTxt")
         }
     }
+    var loc: String{
+        get{
+            defaults.value(forKey: "location") as! String
+        }set{
+            defaults.set(newValue, forKey: "location")
+        }
+    }
+    var pageNo: Int?{
+        get{
+            defaults.value(forKey: "PageNo") as? Int
+        }set{
+            defaults.set(newValue, forKey: "PageNo")
+        }
+    }
+    var dislikePageNo: Int?{
+        get{
+            return defaults.value(forKey: "disPageNo") as? Int
+        }set{
+            defaults.set(newValue, forKey: "disPageNo")
+        }
+    }
+    var galleryViewPageNo: Int?{
+        get{
+            defaults.value(forKey: "GalleryPageNo") as? Int
+        }set{
+            defaults.setValue(newValue, forKey: "GalleryPageNo")
+        }
+    }
     
-
+    var userdataApi: [GetAllUserData]{
+        get{
+            if let storedData = defaults.data(forKey: userDataKey) {
+                return (try? JSONDecoder().decode([GetAllUserData].self, from: storedData)) ?? []
+            }else{
+                return []
+            }
+        }set{
+            if let encodedData = try? JSONEncoder().encode(newValue){
+                defaults.set(encodedData, forKey: userDataKey)
+            }
+            
+        }
+    }
+    
+    var galleryViewData: [GetAllUserData]{
+        get{
+            if let storedData = defaults.data(forKey: GalleryDataKey){
+                return (try? JSONDecoder().decode([GetAllUserData].self, from: storedData)) ?? []
+            }else{
+                return []
+            }
+        }set{
+            if let encodedData = try? JSONEncoder().encode(newValue){
+                defaults.set(encodedData, forKey: GalleryDataKey)
+            }
+        }
+        
+        
+        
+    }
+    func removeAllUserdata() {
+        defaults.removeObject(forKey: userDataKey)
+    }
+    func removGallerydata(){
+        defaults.removeObject(forKey: GalleryDataKey)
+    }
 }

@@ -929,7 +929,7 @@ isn’t available.</string>
                                                 </connections>
                                             </button>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pjA-OP-dqP">
-                                                <rect key="frame" x="15" y="247" width="360" height="383"/>
+                                                <rect key="frame" x="30" y="247" width="330" height="383"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="j6H-wm-kMA">
                                                     <size key="itemSize" width="167" height="178"/>
@@ -972,9 +972,9 @@ isn’t available.</string>
                                             <constraint firstItem="LYt-Je-o22" firstAttribute="width" secondItem="RwW-SD-PPx" secondAttribute="width" multiplier="0.8" id="hLm-j4-Xs8"/>
                                             <constraint firstItem="t39-Zc-BQf" firstAttribute="top" secondItem="hls-LA-EWD" secondAttribute="bottom" constant="10" id="k0o-kx-UpP"/>
                                             <constraint firstAttribute="height" constant="750" id="obr-Ft-sYC"/>
-                                            <constraint firstItem="pjA-OP-dqP" firstAttribute="leading" secondItem="RwW-SD-PPx" secondAttribute="leading" constant="15" id="tL7-KN-Iq3"/>
+                                            <constraint firstItem="pjA-OP-dqP" firstAttribute="leading" secondItem="RwW-SD-PPx" secondAttribute="leading" constant="30" id="tL7-KN-Iq3"/>
                                             <constraint firstItem="LYt-Je-o22" firstAttribute="top" secondItem="pjA-OP-dqP" secondAttribute="bottom" constant="50" id="zZI-r9-e09"/>
-                                            <constraint firstAttribute="trailing" secondItem="pjA-OP-dqP" secondAttribute="trailing" constant="15" id="zvD-gJ-XVv"/>
+                                            <constraint firstAttribute="trailing" secondItem="pjA-OP-dqP" secondAttribute="trailing" constant="30" id="zvD-gJ-XVv"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -1451,7 +1451,7 @@ isn’t available.</string>
                                 <rect key="frame" x="0.0" y="127" width="390" height="683"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vui-XS-AJf">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="748.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="904"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lir-FC-6gv" customClass="GrayBorderView" customModule="Marier" customModuleProvider="target">
                                                 <rect key="frame" x="30" y="20" width="330" height="135.33333333333334"/>
@@ -1563,7 +1563,7 @@ isn’t available.</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gd3-RY-Xdt" customClass="GrayBorderView" customModule="Marier" customModuleProvider="target">
-                                                <rect key="frame" x="30" y="330.66666666666669" width="330" height="154"/>
+                                                <rect key="frame" x="30" y="486" width="330" height="154"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pb4-qY-Mco">
                                                         <rect key="frame" x="132.33333333333334" y="10" width="65.333333333333343" height="24"/>
@@ -1599,7 +1599,7 @@ isn’t available.</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HpO-xF-Whw" customClass="GrayBorderView" customModule="Marier" customModuleProvider="target">
-                                                <rect key="frame" x="30" y="504.66666666666663" width="330" height="154"/>
+                                                <rect key="frame" x="30" y="660" width="330" height="154"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sexuality" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzb-Wc-Zf6">
                                                         <rect key="frame" x="125.66666666666666" y="10" width="79" height="24"/>
@@ -1635,7 +1635,7 @@ isn’t available.</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f85-TG-f2R" customClass="ThemeButton" customModule="Marier" customModuleProvider="target">
-                                                <rect key="frame" x="40" y="678.66666666666663" width="310" height="50"/>
+                                                <rect key="frame" x="40" y="834" width="310" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="hkX-cB-7c2"/>
                                                 </constraints>
@@ -1645,10 +1645,67 @@ isn’t available.</string>
                                                     <action selector="proceedTapped:" destination="USr-be-wQa" eventType="touchUpInside" id="yEU-1h-hFQ"/>
                                                 </connections>
                                             </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z2I-8V-crh" customClass="GrayBorderView" customModule="Marier" customModuleProvider="target">
+                                                <rect key="frame" x="30" y="330.66666666666669" width="330" height="135.33333333333331"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bO-2c-ZPc">
+                                                        <rect key="frame" x="151" y="10" width="28" height="24"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lK0-i8-Uwt">
+                                                        <rect key="frame" x="10" y="99.999999999999943" width="310" height="1"/>
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="B3Q-7o-9RG"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ei6-FA-Vsi">
+                                                        <rect key="frame" x="10" y="40" width="310" height="60"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="V9P-9H-gYr"/>
+                                                        </constraints>
+                                                        <color key="textColor" systemColor="labelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type Somthing about yourself" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NfV-dB-wtf">
+                                                        <rect key="frame" x="10" y="110.99999999999994" width="310" height="19.333333333333343"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" name="borderColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" name="grayThemeColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="lK0-i8-Uwt" firstAttribute="top" secondItem="Ei6-FA-Vsi" secondAttribute="bottom" id="216-uo-yEN"/>
+                                                    <constraint firstAttribute="bottom" secondItem="NfV-dB-wtf" secondAttribute="bottom" constant="5" id="2vH-4y-Bmo"/>
+                                                    <constraint firstItem="2bO-2c-ZPc" firstAttribute="top" secondItem="Z2I-8V-crh" secondAttribute="top" constant="10" id="HFE-vN-9cg"/>
+                                                    <constraint firstItem="Ei6-FA-Vsi" firstAttribute="top" secondItem="Z2I-8V-crh" secondAttribute="top" constant="40" id="QmH-2D-DAq"/>
+                                                    <constraint firstItem="lK0-i8-Uwt" firstAttribute="leading" secondItem="Ei6-FA-Vsi" secondAttribute="leading" id="TN5-ct-NIV"/>
+                                                    <constraint firstAttribute="trailing" secondItem="NfV-dB-wtf" secondAttribute="trailing" constant="10" id="hjz-AU-mOA"/>
+                                                    <constraint firstItem="NfV-dB-wtf" firstAttribute="leading" secondItem="Z2I-8V-crh" secondAttribute="leading" constant="10" id="qdL-fd-pwP"/>
+                                                    <constraint firstItem="lK0-i8-Uwt" firstAttribute="trailing" secondItem="Ei6-FA-Vsi" secondAttribute="trailing" id="rCf-Te-pn4"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Ei6-FA-Vsi" secondAttribute="trailing" constant="10" id="tXW-h5-iW8"/>
+                                                    <constraint firstItem="2bO-2c-ZPc" firstAttribute="centerX" secondItem="Z2I-8V-crh" secondAttribute="centerX" id="vUL-aw-0WU"/>
+                                                    <constraint firstItem="Ei6-FA-Vsi" firstAttribute="leading" secondItem="Z2I-8V-crh" secondAttribute="leading" constant="10" id="wfl-Zh-rGG"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="Gd3-RY-Xdt" firstAttribute="trailing" secondItem="YAe-xK-6zi" secondAttribute="trailing" id="51u-Xe-RWV"/>
+                                            <constraint firstItem="Z2I-8V-crh" firstAttribute="leading" secondItem="YAe-xK-6zi" secondAttribute="leading" id="56D-B5-uMb"/>
                                             <constraint firstItem="f85-TG-f2R" firstAttribute="leading" secondItem="Vui-XS-AJf" secondAttribute="leading" constant="40" id="6za-6G-1Je"/>
                                             <constraint firstItem="HpO-xF-Whw" firstAttribute="leading" secondItem="Gd3-RY-Xdt" secondAttribute="leading" id="DCl-zQ-Yr3"/>
                                             <constraint firstItem="Gd3-RY-Xdt" firstAttribute="leading" secondItem="YAe-xK-6zi" secondAttribute="leading" id="Doh-4G-JLE"/>
@@ -1662,8 +1719,11 @@ isn’t available.</string>
                                             <constraint firstItem="lir-FC-6gv" firstAttribute="top" secondItem="Vui-XS-AJf" secondAttribute="top" constant="20" id="XpG-DK-8v5"/>
                                             <constraint firstItem="YAe-xK-6zi" firstAttribute="trailing" secondItem="lir-FC-6gv" secondAttribute="trailing" id="Zcl-Hy-Gef"/>
                                             <constraint firstAttribute="trailing" secondItem="lir-FC-6gv" secondAttribute="trailing" constant="30" id="Zld-lf-xo6"/>
+                                            <constraint firstItem="Gd3-RY-Xdt" firstAttribute="top" secondItem="Z2I-8V-crh" secondAttribute="bottom" constant="20" id="bI7-3m-OQT"/>
+                                            <constraint firstItem="Z2I-8V-crh" firstAttribute="trailing" secondItem="YAe-xK-6zi" secondAttribute="trailing" id="bh8-lq-Jp4"/>
                                             <constraint firstItem="YAe-xK-6zi" firstAttribute="leading" secondItem="lir-FC-6gv" secondAttribute="leading" id="cpO-9C-oE9"/>
-                                            <constraint firstItem="Gd3-RY-Xdt" firstAttribute="top" secondItem="YAe-xK-6zi" secondAttribute="bottom" constant="20" id="obd-JJ-WQN"/>
+                                            <constraint firstItem="Z2I-8V-crh" firstAttribute="height" secondItem="YAe-xK-6zi" secondAttribute="height" id="ooN-yD-wmA"/>
+                                            <constraint firstItem="Z2I-8V-crh" firstAttribute="top" secondItem="YAe-xK-6zi" secondAttribute="bottom" constant="20" id="urg-HF-utz"/>
                                             <constraint firstItem="f85-TG-f2R" firstAttribute="top" secondItem="HpO-xF-Whw" secondAttribute="bottom" constant="20" id="vVm-B6-sqm"/>
                                         </constraints>
                                     </view>
@@ -1705,11 +1765,12 @@ isn’t available.</string>
                         <outlet property="nameTxtField" destination="oTZ-Ci-y1M" id="w1V-8q-frr"/>
                         <outlet property="sexualityTable" destination="i8y-nJ-FaO" id="IcJ-BB-ZHU"/>
                         <outlet property="sexualityTableHeight" destination="HgO-dX-f6g" id="eeT-io-o5D"/>
+                        <outlet property="textViewBio" destination="Ei6-FA-Vsi" id="keg-lH-jz7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T3d-xG-aOa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2806" y="4"/>
+            <point key="canvasLocation" x="2803.0769230769229" y="3.5545023696682461"/>
         </scene>
     </scenes>
     <resources>
@@ -1737,6 +1798,9 @@ isn’t available.</string>
         <namedColor name="grayThemeColor">
             <color red="0.98000001907348633" green="0.98000001907348633" blue="0.98000001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

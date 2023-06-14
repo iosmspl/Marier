@@ -24,7 +24,7 @@ class AddImageVC: UIViewController {
     }
     
     @IBAction func submitTapped(_ sender: UIButton) {
-//        print("===\(imgArray)==")
+        print("===\(imgArray)==")
        
         
         if imgArray.isEmpty{
@@ -32,16 +32,16 @@ class AddImageVC: UIViewController {
         }else{
             ARSLineProgress.show()
             ApiManger.Shared.uploadImagesApi(images: imgArray) { isSucces, error in
-                print("Complilation")
+//                print("Complilation")
                 if isSucces{
                     ARSLineProgress.hide()
                     let vc = StoryBoards.Discover.instantiateViewController(withIdentifier: "TabBarVc") as! TabBarVc
                            self.navigationController?.pushViewController(vc, animated: true)
                 }else{
                     ARSLineProgress.hide()
-                    self.AlertDisplay(AlertTitle: "Somthing Went Wrong ", Message: "", Actiontitle: "OK")
+                    self.AlertDisplay(AlertTitle: "\(error) ", Message: "", Actiontitle: "OK")
                 }
-                
+
             }
         }
 //        let vc = StoryBoards.Discover.instantiateViewController(withIdentifier: "TabBarVc") as! TabBarVc

@@ -6,16 +6,31 @@
 //
 
 import UIKit
-
+import AlamofireImage
+import CoreLocation
 class DetailProfileVC: UIViewController {
-    
+    var geocoding = CLGeocoder()
     var menuClicked = false
     @IBOutlet weak var MenuView: UIView!
     @IBOutlet weak var DetailCollection: UICollectionView!
-    
     @IBOutlet weak var StarBtn: UIButton!
     @IBOutlet weak var LikeBtn: UIButton!
     @IBOutlet weak var DislikeBtn: UIButton!
+    @IBOutlet weak var bio: UILabel!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var gender: UILabel!
+    @IBOutlet weak var from: UILabel!
+    @IBOutlet weak var interests: UILabel!
+    @IBOutlet weak var userpic: UIImageView!
+    
+    var avatar: String?
+    var bioUser: String?
+    var genderUser: String?
+    var userLocation: String?
+    var interestsUser = [GetallInterData]()
+    var nameUser: String?
+    var galleryUser = [Gallery]()
+    var location = [Double]()
     let imgArrayTemp = [UIImage(named: "i1"),UIImage(named: "i2")
                   ,UIImage(named: "i3"),UIImage(named: "i4"),
                     UIImage(named: "i5")]
@@ -34,9 +49,45 @@ class DetailProfileVC: UIViewController {
             
         }
         
-        DetailCollection.register(UINib(nibName: "DetailProfileCollectionCell", bundle: nil), forCellWithReuseIdentifier: "DetailProfileCollectionCell") 
+        
+        DetailCollection.register(UINib(nibName: "DetailProfileCollectionCell", bundle: nil), forCellWithReuseIdentifier: "DetailProfileCollectionCell")
+        setData()
         // Do any additional setup after loading the view.
     }
+    
+    func setData(){
+        bio.text = "\(bioUser ?? "")" 
+        gender.text = genderUser ?? ""
+        name.text = nameUser ?? ""
+        if interestsUser.isEmpty == false {
+            var interstUser = ""
+            var count = 0
+            for interes in interestsUser{
+//                print("\(interes)")
+//               interstUser = interstUser + "\((interes.interest) ?? "")"
+                interstUser.append(contentsOf: "\((interes.interest) ?? "")")
+//                print("\(count < interstUser.count-1),\(interestsUser.count)")
+                if count < interestsUser.count-1{
+                    interstUser.append(", ")
+                }
+                count += 1
+            }
+            interests.text = interstUser
+        }
+        if avatar !=  ""{
+            userpic.af.setImage(withURL: URL(string: avatar ?? "")!)
+        }
+        if location.isEmpty == false {
+            
+            reverseGeocoding(lati: location[0], longi: location[1]) { Address in
+                self.from.text = Address
+            }
+
+        }
+    }
+    
+    
+    
     
     @IBAction func BackTapped(_ sender: UIButton){
         navigationController?.popViewController(animated: true)

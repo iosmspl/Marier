@@ -51,6 +51,9 @@
                 <constraint firstAttribute="trailing" secondItem="vKw-Xe-zdi" secondAttribute="trailing" constant="2.5" id="qOo-co-QZf"/>
             </constraints>
             <size key="customSize" width="417" height="111"/>
+            <connections>
+                <outlet property="lblInterests" destination="vZq-0O-dcM" id="nQ8-na-vVR"/>
+            </connections>
             <point key="canvasLocation" x="364.12213740458014" y="41.197183098591552"/>
         </collectionViewCell>
     </objects>

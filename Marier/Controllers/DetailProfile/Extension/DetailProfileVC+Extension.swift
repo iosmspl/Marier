@@ -7,8 +7,8 @@
 
 import Foundation
 import UIKit
-
-
+import AlamofireImage
+import CoreLocation
 
 // collection  for detail profile
     // MARK:- Detailvc collection
@@ -19,12 +19,17 @@ extension DetailProfileVC: UICollectionViewDelegate,UICollectionViewDataSource,U
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
 //        print("this is the image count detail \(imgArrayTemp.count)")
-        return imgArrayTemp.count
+        return galleryUser.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = DetailCollection.dequeueReusableCell(withReuseIdentifier: "DetailProfileCollectionCell", for: indexPath) as! DetailProfileCollectionCell
-        cell.moreImg.image = imgArrayTemp[indexPath.row]
+        
+        if let imgUrl = (galleryUser[indexPath.item].image){
+            cell.moreImg.af.setImage(withURL: URL(string: imgUrl)!)
+        }
+//        cell.moreImg.af.setImage(withURL: <#T##URL#>)
+//        cell.moreImg.image = imgArrayTemp[indexPath.row]
         return cell
     }
     
@@ -35,6 +40,28 @@ extension DetailProfileVC: UICollectionViewDelegate,UICollectionViewDataSource,U
     
     
     
+}
+
+extension DetailProfileVC{
+    func reverseGeocoding(lati: CLLocationDegrees , longi: CLLocationDegrees , compilation: @escaping(_ Address: String?)-> Void){
+        let location = CLLocation(latitude: lati, longitude: longi)
+        
+        geocoding.reverseGeocodeLocation(location) { placemaker, error in
+            if let error = error{
+                
+                print("problem in obtaining location\(error.localizedDescription)")
+                compilation(nil)
+                return
+            }else if let placemaker = placemaker?.last{
+                let city = placemaker.locality ?? ""
+//                print("location = \(city)-")
+                compilation(city)
+            }else{
+                compilation(nil)
+                print("somhting is wrong")
+            }
+        }
+    }
 }
 
 

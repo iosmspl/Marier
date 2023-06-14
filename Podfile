@@ -6,6 +6,7 @@ target 'Marier' do
   use_frameworks!
 
   # Pods for Marier
+   pod 'Toast'
    pod 'ARSLineProgress'
    pod 'AlamofireImage'
    pod 'Alamofire'

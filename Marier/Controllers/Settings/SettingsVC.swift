@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import ARSLineProgress
 class SettingsVC: UIViewController {
     @IBOutlet weak var edit_Btn: UIButton!
     override func viewDidLoad() {
@@ -77,8 +77,20 @@ class SettingsVC: UIViewController {
     navigationController?.pushViewController(vc, animated: true)
 }
     @IBAction func MyPhotosTapped(_ sender: UIButton) {
+        ARSLineProgress.show()
         let vc = StoryBoards.Profile.instantiateViewController(withIdentifier: "MyPhotosVC") as! MyPhotosVC
-        navigationController?.pushViewController(vc, animated: true)
+        let id = Defaults.defaultClass.id
+        ApiManger.Shared.getCurrentUserApi(id: id) { resdata, isSuccess in
+            if isSuccess{
+                ARSLineProgress.hide()
+                vc.myphotsArray = ((resdata?.data?.gallery))!
+                self.navigationController?.pushViewController(vc, animated: true)
+            }else{
+                ARSLineProgress.hide()
+                print("Somthing wrong")
+            }
+        }
+//        navigationController?.pushViewController(vc, animated: true)
     }
 
     /*

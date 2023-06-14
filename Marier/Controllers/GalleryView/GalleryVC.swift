@@ -9,10 +9,27 @@ import UIKit
 
 class GalleryVC: UIViewController {
     @IBOutlet weak var GalleryCollectionView: UICollectionView!
-    
+    var isFeatchedData = false
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("gallery view is displayed ")
         GalleryCollectionView.register(UINib(nibName: "GalleryCollecViewCell", bundle: nil), forCellWithReuseIdentifier: "GalleryCollecViewCell")
+        
+        if Defaults.defaultClass.galleryViewPageNo == nil{
+            Defaults.defaultClass.galleryViewPageNo = 1
+        }
+        
+        ApiManger.Shared.getAlluserApi(pageSize: 10, pageNo: Defaults.defaultClass.galleryViewPageNo!) { resdata, isSuccess in
+            if isSuccess {
+                Defaults.defaultClass.galleryViewData = (resdata?.data) ?? []
+//                print("galleryView \(Defaults.defaultClass.galleryViewData.count)")
+                self.GalleryCollectionView.delegate = self
+                self.GalleryCollectionView.reloadData()
+            }else{
+                print("somthing wrong gallery view")
+            }
+        }
+        
         
         // Do any additional setup after loading the view.
     }

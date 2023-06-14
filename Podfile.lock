@@ -7,6 +7,7 @@ PODS:
   - Koloda (5.0.1):
     - pop (~> 1.0)
   - pop (1.0.12)
+  - Toast (4.0.0)
   - TTRangeSlider (1.0.7)
 
 DEPENDENCIES:
@@ -15,6 +16,7 @@ DEPENDENCIES:
   - ARSLineProgress
   - DropDown
   - Koloda
+  - Toast
   - TTRangeSlider
 
 SPEC REPOS:
@@ -25,6 +27,7 @@ SPEC REPOS:
     - DropDown
     - Koloda
     - pop
+    - Toast
     - TTRangeSlider
 
 SPEC CHECKSUMS:
@@ -34,8 +37,9 @@ SPEC CHECKSUMS:
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   Koloda: d07b9199a383abc5898b62aa945a599f5e7c0c4b
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   TTRangeSlider: 8cf72eca457c3b700c92eb0074be908c986e25ec
 
-PODFILE CHECKSUM: 9f6a6c2b57ca37e6d9431ce746879efac46c9b13
+PODFILE CHECKSUM: 1194ea006519a363f05b78ebb001c3dd25448141
 
 COCOAPODS: 1.12.0

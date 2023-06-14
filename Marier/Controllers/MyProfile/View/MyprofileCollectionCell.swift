@@ -8,7 +8,7 @@
 import UIKit
 
 class MyprofileCollectionCell: UICollectionViewCell {
-
+    @IBOutlet weak var lblInterests: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

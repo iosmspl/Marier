@@ -7,16 +7,48 @@
 
 import UIKit
 import PhotosUI
-
+import AlamofireImage
 class MyprofileVC: UIViewController {
     @IBOutlet weak var UserProfilePic: UIImageView!
     @IBOutlet weak var MyprofileCollectionView: UICollectionView!
+    @IBOutlet weak var lblGender: UILabel!
+    @IBOutlet weak var lblFrom: UILabel!
+    @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var lblBio: UILabel!
+
     var Selected_img_Array = [UIImage]()
+    var interestsArray = [GetallInterData]()
     override func viewDidLoad() {
         super.viewDidLoad()
         MyprofileCollectionView.register(UINib(nibName: "MyprofileCollectionCell", bundle: nil), forCellWithReuseIdentifier: "MyprofileCollectionCell")
         
         // Do any additional setup after loading the view.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        let id = Defaults.defaultClass.id
+        ApiManger.Shared.getCurrentUserApi(id: id) {[self] resdata, isSuccess in
+            if isSuccess {
+                interestsArray = (resdata?.data?.interests)!
+                let gender: String = (resdata?.data?.sex) ?? ""
+//                let from: String = (resdata?.data?.loc) ?? ""
+                let name: String = (resdata?.data?.name) ?? ""
+                let bio: String = (resdata?.data?.bio) ?? ""
+//                print("\(gender)-\(from)-\(name)-\(bio)")
+                lblGender.text = gender
+                lblFrom.text = Defaults.defaultClass.loc
+                lblName.text = name
+                lblBio.text = bio
+                MyprofileCollectionView.reloadData()
+                
+                if let img:String = (resdata?.data?.avatar) {
+                    print("---\(img)---")
+                    UserProfilePic.af.setImage(withURL: (URL(string: img))!)
+                }
+                
+            }
+        }
+        
+       
     }
     
     @IBAction func CameraIconTapped(_ sender: UIButton) {
@@ -36,7 +68,7 @@ class MyprofileVC: UIViewController {
         let Gallery = UIAlertAction(title: "Chose From Gallery", style: .default) {[self] Gallery in
             
             var config = PHPickerConfiguration()
-            config.selectionLimit = 4
+            config.selectionLimit = 1
             
             let ImagePicker = PHPickerViewController(configuration: config)
             ImagePicker.delegate = self

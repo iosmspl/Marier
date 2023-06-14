@@ -81,6 +81,7 @@ struct Gallery: Codable{
     let _id: String?
 }
     
+
     
 //MARK: - UPDATE USER API  MODEL
 
@@ -90,7 +91,8 @@ struct UpdateApiParmes: Encodable{
 //    let phoneNumber: String?
     let sex: String?
     let dob: String?
-    let address: String?
+    let bio: String?
+//    let address: String?
     let setting: Settings?
 }
 struct Settings: Encodable{
@@ -165,4 +167,5 @@ struct sexulaity: Encodable{
 struct updateInterestApi: Encodable{
     let interests: [String]?
 }
+
 

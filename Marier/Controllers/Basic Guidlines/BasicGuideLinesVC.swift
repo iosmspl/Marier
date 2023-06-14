@@ -15,7 +15,7 @@ class BasicGuideLinesVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       
         // Do any additional setup after loading the view.
     }
     
@@ -29,7 +29,16 @@ class BasicGuideLinesVC: UIViewController {
     
     @IBAction func UnderstandTapped(_ sender: UIButton) {
         let vc = StoryBoards.auth.instantiateViewController(withIdentifier: "PersonalVC") as! PersonalVC
-        navigationController?.pushViewController(vc, animated: true)
+        ApiManger.Shared.getAllsexuality { resdata, isSucces in
+            if isSucces{
+                let array = (resdata?.data)!
+                vc.SexualityArrayApi = array
+                self.navigationController?.pushViewController(vc, animated: true)
+//                vc.sexualityTable.reloadData()
+            }
+        }
+//                                    self.navigationController?.pushViewController(vc, animated: true)
+
     }
     
     /*

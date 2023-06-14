@@ -38,6 +38,7 @@ class EmailVC: UIViewController {
 //        ARSLineProgress.show()
       if ReachabilityNetwork.isConnectedToNetwork(){
           if email.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+
              AlertDisplay(AlertTitle: "Field Missing", Message: "Please enter email or PhoneNumber", Actiontitle: "OK")
           }else {
               ARSLineProgress.show()
@@ -54,7 +55,7 @@ class EmailVC: UIViewController {
                           print("||error|| EmailVC")
                       }
                   }
-                  
+
               }else if isPhoneNumber(email.text!){
                   let model = loginOtpInput(phoneNumber: email.text! , email: "")
                   ApiManger.Shared.LoginOtpApi(OtpModel: model) { isSuccess,resdata  in
@@ -66,13 +67,13 @@ class EmailVC: UIViewController {
                           print("||error|| EmailVC")
                       }
                   }
-                  
+
               } else{
                   ARSLineProgress.hide()
                   AlertDisplay(AlertTitle: "Validation Faild", Message: "please enter proper number or email", Actiontitle: "OK")
                   print(" plese enter valid mail or number")
               }
-              
+
           }
 
         }else{
@@ -81,9 +82,21 @@ class EmailVC: UIViewController {
             navigationController?.pushViewController(vc, animated: true)
             print("somthing Went Wrong")
         }
-            
+        print("t = \(Defaults.defaultClass.token)")
+        print("id = \(Defaults.defaultClass.id)")
+//        ApiManger.Shared.getlikesByOther {resdata,isSuccess in
+//            print("comilation")
+//        }
+//        UserDefaults.standard.removeObject(forKey: "PageNo")
+        Defaults.defaultClass.removeAllUserdata()
+        Defaults.defaultClass.removGallerydata()
+        UserDefaults.standard.removeObject(forKey: "PageNo")
+        UserDefaults.standard.removeObject(forKey: "GalleryPageNo")
+//
 //        let vc = StoryBoards.auth.instantiateViewController(withIdentifier: "OTPVC") as! OTPVC
 //        self.navigationController?.pushViewController(vc, animated: true)
+        
+        
     }
     
     @IBAction func googleTapped(_ sender: UIButton){

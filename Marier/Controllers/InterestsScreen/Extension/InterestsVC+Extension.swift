@@ -56,7 +56,7 @@ extension InterestsVC: UICollectionViewDelegate,UICollectionViewDataSource,UICol
         
         
 //        selectedIndexs.sort()
-        print("---jjj--\(selectedIndexs)--")
+//        print("---jjj--\(selectedIndexs)--")
         let objectId:String = (interestArray[indexPath.item]._id)!
         if selectedIntersArr.contains("\(objectId)"){
           let index = (selectedIntersArr.firstIndex(of: "\(objectId)"))!

@@ -25,6 +25,10 @@ class OTPVC: UIViewController {
         }
         firstTxtField.becomeFirstResponder()
 //         Do any additional setup after loading the view.
+        
+//        ApiManger.Shared.getCurrentUserApi { resdata, isSuccess in
+//            print(" get user compilation")
+//        }
     }
     
        
@@ -33,6 +37,7 @@ class OTPVC: UIViewController {
     @IBAction func submitTapped(_ sender: UIButton){
         if ReachabilityNetwork.isConnectedToNetwork(){
             if firstTxtField.text == "" && secondTxtField.text == "" && thirdTxtField.text == "" && fourthTxtField.text == ""{
+
                 AlertDisplay(AlertTitle: "otp missing", Message: "please flll complete otp", Actiontitle: "OK")
                 print("please enter all the fileds")
             }else{
@@ -53,11 +58,15 @@ class OTPVC: UIViewController {
                     }
                 }
             }
-            
+
         }else{
             ARSLineProgress.hide()
             print("somthing wrong|otpvc|")
         }
+//
+//        let vc  = StoryBoards.auth.instantiateViewController(withIdentifier: "BasicGuideLinesVC") as! BasicGuideLinesVC
+//                   navigationController?.pushViewController(vc, animated: true)
+
         
     }
     @IBAction func resendTapped(_ sender: UIButton){
@@ -85,18 +94,20 @@ class OTPVC: UIViewController {
                  if isSuccess {
                      print("|resend| \(resdata?.message!)")
                  }
-               
+
              }
          }else{
              ARSLineProgress.hide()
              print("somthin wrong |resend|")
          }
-            
+
         }else{
             ARSLineProgress.hide()
             let vc  = StoryBoards.auth.instantiateViewController(withIdentifier: "ConnectionLostVC") as! ConnectionLostVC
             navigationController?.pushViewController(vc, animated: true)
         }
+//        let vc  = StoryBoards.auth.instantiateViewController(withIdentifier: "ConnectionLostVC") as! ConnectionLostVC
+//                   navigationController?.pushViewController(vc, animated: true)
     }
     @IBAction func backTapped(_ sender: UIButton){
         self.navigationController?.popViewController(animated: true)

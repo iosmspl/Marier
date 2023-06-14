@@ -17,11 +17,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
        
-        
-        
         return true
     }
 
+    func applicationWillTerminate(_ application: UIApplication) {
+        print("app terminated")
+        Defaults.defaultClass.removeAllUserdata()
+        Defaults.defaultClass.removGallerydata()
+        UserDefaults.standard.removeObject(forKey: "PageNo")
+        UserDefaults.standard.removeObject(forKey: "GalleryPageNo")
+        UserDefaults.standard.removeObject(forKey: "disPageNo")
+    }
+    
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
